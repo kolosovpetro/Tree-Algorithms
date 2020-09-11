@@ -2,7 +2,7 @@
 using NUnit.Framework;
 using TreeAlgorithms.AvlTree.Interfaces;
 
-namespace TreeAlgorithms.Tests.AvlTreeTests
+namespace TreeAlgorithms.Tests.AvlTreeTests.AvlTests
 {
     [TestFixture]
     public class AvlRightRotateTest

@@ -59,11 +59,11 @@ namespace TreeAlgorithms.BinarySearchTree.Implementations
 
         public IBinarySearchTree BstDelete(IBinarySearchTree binarySearchTree)
         {
-            if (binarySearchTree.Left == null)
+            if (!binarySearchTree.HasLeft)
                 return Transplant(binarySearchTree, binarySearchTree.Right);
 
-            if (binarySearchTree.Right == null)
-                return Transplant(binarySearchTree, binarySearchTree.Right);
+            if (!binarySearchTree.HasRight)
+                return Transplant(binarySearchTree, binarySearchTree.Left);
 
             var successor = binarySearchTree.Right.Min();
 
