@@ -14,6 +14,7 @@
     </ItemGroup>
 
     <ItemGroup>
+      <Folder Include="ArithmeticTreeTests" />
       <Folder Include="BinaryHeapTests\MaxHeapTests" />
       <Folder Include="BinarySearchTreeTests" />
       <Folder Include="BinaryTreeTests" />
@@ -21,6 +22,7 @@
     </ItemGroup>
 
     <ItemGroup>
+      <ProjectReference Include="..\TreeAlgorithms.ArithmeticTree\TreeAlgorithms.ArithmeticTree.csproj" />
       <ProjectReference Include="..\TreeAlgorithms.BinaryHeap\TreeAlgorithms.BinaryHeap.csproj" />
       <ProjectReference Include="..\TreeAlgorithms.BinarySearchTree\TreeAlgorithms.BinarySearchTree.csproj" />
       <ProjectReference Include="..\TreeAlgorithms.BinaryTree\TreeAlgorithms.BinaryTree.csproj" />

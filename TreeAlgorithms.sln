@@ -32,6 +32,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TreeAlgorithms.BinaryTree.U
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TreeAlgorithms.ShuntingYardAlgorithm", "TreeAlgorithms.ShuntingYardAlgorithm\TreeAlgorithms.ShuntingYardAlgorithm.csproj", "{E59902FF-FE13-4925-81A4-B6B3C8CA0DE9}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TreeAlgorithms.ArithmeticTree.UI", "TreeAlgorithms.ArithmeticTree.UI\TreeAlgorithms.ArithmeticTree.UI.csproj", "{C9ACC9A2-EE23-4B2E-B0DB-F33B51FB9A1D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -102,5 +104,9 @@ Global
 		{E59902FF-FE13-4925-81A4-B6B3C8CA0DE9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E59902FF-FE13-4925-81A4-B6B3C8CA0DE9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E59902FF-FE13-4925-81A4-B6B3C8CA0DE9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C9ACC9A2-EE23-4B2E-B0DB-F33B51FB9A1D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C9ACC9A2-EE23-4B2E-B0DB-F33B51FB9A1D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C9ACC9A2-EE23-4B2E-B0DB-F33B51FB9A1D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C9ACC9A2-EE23-4B2E-B0DB-F33B51FB9A1D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
