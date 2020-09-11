@@ -24,6 +24,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TreeAlgorithms.AvlTree", "T
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TreeAlgorithms.TraversalEngine", "TreeAlgorithms.TraversalEngine\TreeAlgorithms.TraversalEngine.csproj", "{10960B83-3BD5-4BA5-84AA-37DAC0F5DF07}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TreeAlgorithms.BinarySearchTree.UI", "TreeAlgorithms.BinarySearchTree.UI\TreeAlgorithms.BinarySearchTree.UI.csproj", "{DE7F0F99-5180-4891-974F-B3B14452A240}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TreeAlgorithms.BinaryHeap.UI", "TreeAlgorithms.BinaryHeap.UI\TreeAlgorithms.BinaryHeap.UI.csproj", "{198ED475-D127-420B-9A65-256C004695D1}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -78,5 +82,13 @@ Global
 		{10960B83-3BD5-4BA5-84AA-37DAC0F5DF07}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{10960B83-3BD5-4BA5-84AA-37DAC0F5DF07}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{10960B83-3BD5-4BA5-84AA-37DAC0F5DF07}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DE7F0F99-5180-4891-974F-B3B14452A240}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DE7F0F99-5180-4891-974F-B3B14452A240}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DE7F0F99-5180-4891-974F-B3B14452A240}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DE7F0F99-5180-4891-974F-B3B14452A240}.Release|Any CPU.Build.0 = Release|Any CPU
+		{198ED475-D127-420B-9A65-256C004695D1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{198ED475-D127-420B-9A65-256C004695D1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{198ED475-D127-420B-9A65-256C004695D1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{198ED475-D127-420B-9A65-256C004695D1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

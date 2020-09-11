@@ -14,10 +14,12 @@
     </ItemGroup>
 
     <ItemGroup>
+      <Folder Include="BinaryHeapTests\MaxHeapTests" />
       <Folder Include="BinarySearchTreeTests" />
     </ItemGroup>
 
     <ItemGroup>
+      <ProjectReference Include="..\TreeAlgorithms.BinaryHeap\TreeAlgorithms.BinaryHeap.csproj" />
       <ProjectReference Include="..\TreeAlgorithms.BinarySearchTree\TreeAlgorithms.BinarySearchTree.csproj" />
     </ItemGroup>
 
