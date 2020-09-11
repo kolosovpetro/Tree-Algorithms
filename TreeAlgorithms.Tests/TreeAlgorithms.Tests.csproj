@@ -13,4 +13,12 @@
         <PackageReference Include="Microsoft.NET.Test.Sdk" Version="16.4.0" />
     </ItemGroup>
 
+    <ItemGroup>
+      <Folder Include="BinarySearchTreeTests" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\TreeAlgorithms.BinarySearchTree\TreeAlgorithms.BinarySearchTree.csproj" />
+    </ItemGroup>
+
 </Project>
