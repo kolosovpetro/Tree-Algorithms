@@ -36,6 +36,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TreeAlgorithms.ArithmeticTr
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TreeAlgorithms.BinaryHeap.FloydAlgorithm.UI", "TreeAlgorithms.BinaryHeap.FloydAlgorithm.UI\TreeAlgorithms.BinaryHeap.FloydAlgorithm.UI.csproj", "{332E1C6A-913F-44A9-B9C1-F6ADDDC384F3}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TreeAlgorithms.BinaryHeap.PriorityQueue.UI", "TreeAlgorithms.BinaryHeap.PriorityQueue.UI\TreeAlgorithms.BinaryHeap.PriorityQueue.UI.csproj", "{95D1E884-1808-46C3-A3AE-73597EAAA8EC}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -114,5 +116,9 @@ Global
 		{332E1C6A-913F-44A9-B9C1-F6ADDDC384F3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{332E1C6A-913F-44A9-B9C1-F6ADDDC384F3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{332E1C6A-913F-44A9-B9C1-F6ADDDC384F3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{95D1E884-1808-46C3-A3AE-73597EAAA8EC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{95D1E884-1808-46C3-A3AE-73597EAAA8EC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{95D1E884-1808-46C3-A3AE-73597EAAA8EC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{95D1E884-1808-46C3-A3AE-73597EAAA8EC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
