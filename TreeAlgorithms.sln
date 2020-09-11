@@ -38,6 +38,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TreeAlgorithms.BinaryHeap.F
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TreeAlgorithms.BinaryHeap.PriorityQueue.UI", "TreeAlgorithms.BinaryHeap.PriorityQueue.UI\TreeAlgorithms.BinaryHeap.PriorityQueue.UI.csproj", "{95D1E884-1808-46C3-A3AE-73597EAAA8EC}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TreeAlgorithms.TraversalEngine.UI", "TreeAlgorithms.TraversalEngine.UI\TreeAlgorithms.TraversalEngine.UI.csproj", "{D40DDFA1-9F1B-42B9-B1E2-48F6688BB56F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TreeAlgorithms.BinarySearchTree.Enumerator.UI", "TreeAlgorithms.BinarySearchTree.Enumerator.UI\TreeAlgorithms.BinarySearchTree.Enumerator.UI.csproj", "{A03E9540-2B18-4A2A-BBD0-B3530BEB38E8}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -120,5 +124,13 @@ Global
 		{95D1E884-1808-46C3-A3AE-73597EAAA8EC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{95D1E884-1808-46C3-A3AE-73597EAAA8EC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{95D1E884-1808-46C3-A3AE-73597EAAA8EC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D40DDFA1-9F1B-42B9-B1E2-48F6688BB56F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D40DDFA1-9F1B-42B9-B1E2-48F6688BB56F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D40DDFA1-9F1B-42B9-B1E2-48F6688BB56F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D40DDFA1-9F1B-42B9-B1E2-48F6688BB56F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A03E9540-2B18-4A2A-BBD0-B3530BEB38E8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A03E9540-2B18-4A2A-BBD0-B3530BEB38E8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A03E9540-2B18-4A2A-BBD0-B3530BEB38E8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A03E9540-2B18-4A2A-BBD0-B3530BEB38E8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
