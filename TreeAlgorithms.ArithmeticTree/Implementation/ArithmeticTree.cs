@@ -13,17 +13,14 @@ namespace TreeAlgorithms.ArithmeticTree.Implementation
 
             foreach (var input in postfix)
             {
+                var tree = new BinaryTree<char>(input);
                 if (char.IsDigit(input))
-                {
-                    var tree = new BinaryTree<char>(input);
                     stack.Push(tree);
-                }
 
                 else
                 {
                     var tree1 = stack.Pop();
                     var tree2 = stack.Pop();
-                    var tree = new BinaryTree<char>(input);
                     tree.AddLeft(tree2);
                     tree.AddRight(tree1);
                     stack.Push(tree);
