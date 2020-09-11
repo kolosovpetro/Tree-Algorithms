@@ -18,8 +18,8 @@ namespace TreeAlgorithms.ArithmeticTree.Implementation
                     var tree = new BinaryTree<char>(input);
                     stack.Push(tree);
                 }
-                
-                else if (!char.IsDigit(input))
+
+                else
                 {
                     var tree1 = stack.Pop();
                     var tree2 = stack.Pop();
