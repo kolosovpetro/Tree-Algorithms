@@ -17,12 +17,14 @@
       <Folder Include="BinaryHeapTests\MaxHeapTests" />
       <Folder Include="BinarySearchTreeTests" />
       <Folder Include="BinaryTreeTests" />
+      <Folder Include="ShuntingYardTests" />
     </ItemGroup>
 
     <ItemGroup>
       <ProjectReference Include="..\TreeAlgorithms.BinaryHeap\TreeAlgorithms.BinaryHeap.csproj" />
       <ProjectReference Include="..\TreeAlgorithms.BinarySearchTree\TreeAlgorithms.BinarySearchTree.csproj" />
       <ProjectReference Include="..\TreeAlgorithms.BinaryTree\TreeAlgorithms.BinaryTree.csproj" />
+      <ProjectReference Include="..\TreeAlgorithms.ShuntingYardAlgorithm\TreeAlgorithms.ShuntingYardAlgorithm.csproj" />
     </ItemGroup>
 
 </Project>
