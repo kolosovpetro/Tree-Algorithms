@@ -12,7 +12,7 @@ namespace TreeAlgorithms.TraversalEngine.Implementations
             var stack = new Stack<IBinarySearchTree>();
             var currentNode = tree;
 
-            while (currentNode != null || stack.Any())
+            while (currentNode != null || stack.Count > 0)
             {
                 while (currentNode != null)
                 {
@@ -31,7 +31,7 @@ namespace TreeAlgorithms.TraversalEngine.Implementations
             var stack = new Stack<IBinarySearchTree>();
             stack.Push(tree);
 
-            while (stack.Any())
+            while (stack.Count > 0)
             {
                 var currentNode = stack.Pop();
                 yield return currentNode;
@@ -62,7 +62,7 @@ namespace TreeAlgorithms.TraversalEngine.Implementations
                     stack.Push(currentNode.Right);
             }
 
-            while (outStack.Any())
+            while (outStack.Count > 0)
                 yield return outStack.Pop();
         }
 
@@ -71,13 +71,13 @@ namespace TreeAlgorithms.TraversalEngine.Implementations
             var queue = new Queue<IBinarySearchTree>();
             queue.Enqueue(tree);
 
-            while (queue.Any())
+            while (queue.Count > 0)
             {
                 var current = queue.Dequeue();
 
-                if (current.HasLeft) 
+                if (current.HasLeft)
                     queue.Enqueue(current.Left);
-                if (current.HasRight) 
+                if (current.HasRight)
                     queue.Enqueue(current.Right);
 
                 yield return current;

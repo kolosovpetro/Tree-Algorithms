@@ -74,7 +74,7 @@ namespace TreeAlgorithms.BinaryTree.Implementations
             Console.Write(binaryTree.Data + " ");
             InOrderTraversal(binaryTree.Right);
         }
-        
+
         // RNL
         public void OutOrderTraversal(IBinaryTree<T> binaryTree)
         {
@@ -92,13 +92,13 @@ namespace TreeAlgorithms.BinaryTree.Implementations
             PostOrderTraversal(binaryTree.Right);
             Console.Write(binaryTree.Data + " ");
         }
-        
+
         public void BreadthFirstTreeTraversal(IBinaryTree<T> binaryTree)
         {
             var queue = new Queue<IBinaryTree<T>>();
             queue.Enqueue(binaryTree);
-            
-            while (queue.Any())
+
+            while (queue.Count > 0)
             {
                 var currentTree = queue.Dequeue();
                 Console.Write(currentTree.Data + " ");

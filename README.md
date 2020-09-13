@@ -19,3 +19,9 @@ Repository with implementations of various trees and related algorithms.
 - Floyd's Algorithm (Heapify in O(n) complexity)
 - Shunting Yard Algorithm (Used to build arithmetic expressions tree)
 - Heap Sort (Sorting with O(nlg(n)) in worst case)
+
+## To do
+
+- Implement recursive traversals for BST
+- Implement recursive traversals for BT
+- Implement iterative traversals for BT
