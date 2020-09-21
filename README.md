@@ -2,7 +2,7 @@
 
 Repository with implementations of various trees and related algorithms.
 
-## Trees Implemented
+## Trees Implemented+
 
 - Binary tree
 - Binary Heaps (Min, Max)
@@ -25,3 +25,6 @@ Repository with implementations of various trees and related algorithms.
 - Implement recursive traversals for BST
 - Implement recursive traversals for BT
 - Implement iterative traversals for BT
+- Write tests for Heaps
+- Write tests for Heapsort
+- Migrate all tests from previous project

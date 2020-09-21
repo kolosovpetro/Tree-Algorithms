@@ -7,7 +7,7 @@ namespace TreeAlgorithms.AvlTree.Implementations
 {
     public class AvlTree : IAvlTree
     {
-        public int Key { get; }
+        public int Key { get; set; }
         public bool IsExternal => !HasLeft && !HasRight;
         public bool HasLeft => Left != null;
         public bool HasRight => Right != null;
@@ -175,19 +175,31 @@ namespace TreeAlgorithms.AvlTree.Implementations
 
         public IAvlTree LeftRotate()
         {
-            var parent = Parent;
-            Parent = Right;
+            // save current key
+            var currentKey = Key;
 
-            if (parent != null)
-            {
-                Parent.Parent = parent;
-                Parent.Parent.Right = Parent;
-            }
+            // save new key
+            var newKey = Right.Key;
+            
+            // save new left item
+            var newLeft = Right;
+            
+            // save new right item
+            var newRight = Right.Right;
+            
+            // set parents for new left and right
+            newLeft.Parent = this;
+            newRight.Parent = this;
+            
+            // set new keys
+            Key = newKey;
+            newLeft.Key = currentKey;
 
-            Parent.Left = this;
-            Right = null;
+            Right = newRight;
+            Left = newLeft;
 
             return this;
+
         }
 
         public IAvlTree RightLeftRotate()

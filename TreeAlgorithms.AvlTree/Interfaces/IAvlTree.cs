@@ -3,7 +3,7 @@
     public interface IAvlTree
     {
         // bst functionality
-        int Key { get; }
+        int Key { get; set; }
         bool IsExternal { get; }
         bool HasLeft { get; }
         bool HasRight { get; }
