@@ -18,4 +18,8 @@
       <Folder Include="BstFunctionalityTests" />
     </ItemGroup>
 
+    <ItemGroup>
+      <ProjectReference Include="..\TreeAlgorithms.AvlTree\TreeAlgorithms.AvlTree.csproj" />
+    </ItemGroup>
+
 </Project>
