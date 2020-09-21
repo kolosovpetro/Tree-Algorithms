@@ -180,17 +180,17 @@ namespace TreeAlgorithms.AvlTree.Implementations
 
             // save new key
             var newKey = Right.Key;
-            
+
             // save new left item
             var newLeft = Right;
-            
+
             // save new right item
             var newRight = Right.Right;
-            
+
             // set parents for new left and right
             newLeft.Parent = this;
             newRight.Parent = this;
-            
+
             // set new keys
             Key = newKey;
             newLeft.Key = currentKey;
@@ -199,7 +199,6 @@ namespace TreeAlgorithms.AvlTree.Implementations
             Left = newLeft;
 
             return this;
-
         }
 
         public IAvlTree RightLeftRotate()
@@ -231,6 +230,20 @@ namespace TreeAlgorithms.AvlTree.Implementations
         public void AvlDelete(int key)
         {
             throw new NotImplementedException();
+        }
+
+        public void PrintLevelOrder(IAvlTree tree)
+        {
+            var queue = new Queue<IAvlTree>();
+            queue.Enqueue(tree);
+
+            while (queue.Any())
+            {
+                var current = queue.Dequeue();
+                Console.Write(current.Key + " ");
+                if (current.HasLeft) queue.Enqueue(current.Left);
+                if (current.HasRight) queue.Enqueue(current.Right);
+            }
         }
     }
 }
