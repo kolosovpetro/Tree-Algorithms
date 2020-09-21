@@ -42,8 +42,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TreeAlgorithms.BinarySearch
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TreeAlgorithms.BinaryHeap.Heapsort.UI", "TreeAlgorithms.BinaryHeap.Heapsort.UI\TreeAlgorithms.BinaryHeap.Heapsort.UI.csproj", "{D7A0E3E5-C8A3-4153-8D93-4599F3CF8DCC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TreeAlgorithms.BinarySearchTree.Tests", "TreeAlgorithms.BinarySearchTree.Tests\TreeAlgorithms.BinarySearchTree.Tests.csproj", "{1DC618CF-B5C0-4B56-9915-669EEAF3D60D}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -134,9 +132,5 @@ Global
 		{D7A0E3E5-C8A3-4153-8D93-4599F3CF8DCC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D7A0E3E5-C8A3-4153-8D93-4599F3CF8DCC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D7A0E3E5-C8A3-4153-8D93-4599F3CF8DCC}.Release|Any CPU.Build.0 = Release|Any CPU
-		{1DC618CF-B5C0-4B56-9915-669EEAF3D60D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{1DC618CF-B5C0-4B56-9915-669EEAF3D60D}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{1DC618CF-B5C0-4B56-9915-669EEAF3D60D}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{1DC618CF-B5C0-4B56-9915-669EEAF3D60D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
