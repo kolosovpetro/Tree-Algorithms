@@ -14,7 +14,7 @@ namespace TreeAlgorithms.ShuntingYardAlgorithm.Implementation
 
             foreach (var token in input)
             {
-                if (int.TryParse(token.ToString(), out _))
+                if (char.IsDigit(token))
                 {
                     outputQueue.Enqueue(token);
                     continue;
@@ -29,21 +29,23 @@ namespace TreeAlgorithms.ShuntingYardAlgorithm.Implementation
                     {
                         while (operandStack.Peek() != '(') 
                             outputQueue.Enqueue(operandStack.Pop());
-
                         operandStack.Pop();
                         continue;
                     }
                 }
 
-                while (operandStack.Any()
+                while (operandStack.Any() 
                        && Precedence(operandStack.Peek()) >= Precedence(token)
-                       && Associativity(token) == "Left") 
+                       && Associativity(token) == "Left")
+                {
                     outputQueue.Enqueue(operandStack.Pop());
+                }
 
                 operandStack.Push(token);
             }
 
-            while (operandStack.Any()) outputQueue.Enqueue(operandStack.Pop());
+            while (operandStack.Any()) 
+                outputQueue.Enqueue(operandStack.Pop());
             return outputQueue;
         }
 

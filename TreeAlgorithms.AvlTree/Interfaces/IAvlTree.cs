@@ -3,8 +3,8 @@
     public interface IAvlTree
     {
         // bst functionality
-        int Key { get; set; }
-        bool IsEmpty { get; }
+        int Key { get; }
+        bool IsExternal { get; }
         bool HasLeft { get; }
         bool HasRight { get; }
         int Balance { get; }
@@ -17,11 +17,7 @@
         IAvlTree Max();
         IAvlTree Min();
         IAvlTree Successor(IAvlTree tree);
-        bool IsExternal(IAvlTree tree);
-        public IAvlTree Transplant(IAvlTree originalBst, IAvlTree replacementBst);
         int Height(IAvlTree tree);
-        void PrintSorted();
-        void PrintLevelOrder();
         int Count();
         
         // avl functionality

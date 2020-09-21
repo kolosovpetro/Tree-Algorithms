@@ -42,6 +42,12 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TreeAlgorithms.TraversalEng
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TreeAlgorithms.BinarySearchTree.Enumerator.UI", "TreeAlgorithms.BinarySearchTree.Enumerator.UI\TreeAlgorithms.BinarySearchTree.Enumerator.UI.csproj", "{A03E9540-2B18-4A2A-BBD0-B3530BEB38E8}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TreeAlgorithms.BinaryHeap.Heapsort.UI", "TreeAlgorithms.BinaryHeap.Heapsort.UI\TreeAlgorithms.BinaryHeap.Heapsort.UI.csproj", "{D7A0E3E5-C8A3-4153-8D93-4599F3CF8DCC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TreeAlgorithms.AvlTree.Tests", "TreeAlgorithms.AvlTree.Tests\TreeAlgorithms.AvlTree.Tests.csproj", "{0E193305-95C7-4DA3-85F8-8EFB0A310AF4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TreeAlgorithms.AvlTree.UI", "TreeAlgorithms.AvlTree.UI\TreeAlgorithms.AvlTree.UI.csproj", "{F956CB2E-0321-43B8-AE41-0A689F5108DD}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -132,5 +138,17 @@ Global
 		{A03E9540-2B18-4A2A-BBD0-B3530BEB38E8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A03E9540-2B18-4A2A-BBD0-B3530BEB38E8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A03E9540-2B18-4A2A-BBD0-B3530BEB38E8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D7A0E3E5-C8A3-4153-8D93-4599F3CF8DCC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D7A0E3E5-C8A3-4153-8D93-4599F3CF8DCC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D7A0E3E5-C8A3-4153-8D93-4599F3CF8DCC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D7A0E3E5-C8A3-4153-8D93-4599F3CF8DCC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0E193305-95C7-4DA3-85F8-8EFB0A310AF4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0E193305-95C7-4DA3-85F8-8EFB0A310AF4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0E193305-95C7-4DA3-85F8-8EFB0A310AF4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0E193305-95C7-4DA3-85F8-8EFB0A310AF4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F956CB2E-0321-43B8-AE41-0A689F5108DD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F956CB2E-0321-43B8-AE41-0A689F5108DD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F956CB2E-0321-43B8-AE41-0A689F5108DD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F956CB2E-0321-43B8-AE41-0A689F5108DD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

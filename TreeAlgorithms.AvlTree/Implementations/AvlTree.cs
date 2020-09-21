@@ -7,8 +7,8 @@ namespace TreeAlgorithms.AvlTree.Implementations
 {
     public class AvlTree : IAvlTree
     {
-        public int Key { get; set; }
-        public bool IsEmpty => !HasLeft && !HasRight;
+        public int Key { get; }
+        public bool IsExternal => !HasLeft && !HasRight;
         public bool HasLeft => Left != null;
         public bool HasRight => Right != null;
         public int Balance => Height(this) - Height(Left);
@@ -16,10 +16,7 @@ namespace TreeAlgorithms.AvlTree.Implementations
         public IAvlTree Left { get; set; }
         public IAvlTree Right { get; set; }
 
-        public AvlTree(int key)
-        {
-            Key = key;
-        }
+        public AvlTree(int key) => Key = key;
 
         public IAvlTree Search(int key)
         {
@@ -111,12 +108,10 @@ namespace TreeAlgorithms.AvlTree.Implementations
             return currentParent;
         }
 
-        public bool IsExternal(IAvlTree tree) => tree.IsEmpty;
-
         public int Height(IAvlTree tree)
         {
             if (tree == null) return 0;
-            if (IsExternal(tree)) return 0;
+            if (tree.IsExternal) return 0;
             var height = 0;
 
             if (tree.HasLeft)
@@ -127,15 +122,7 @@ namespace TreeAlgorithms.AvlTree.Implementations
             return height + 1;
         }
 
-        private static void InOrder(IAvlTree tree)
-        {
-            if (tree == null) return;
-            InOrder(tree.Left);
-            Console.Write($"{tree.Key} ");
-            InOrder(tree.Right);
-        }
-
-        public IAvlTree Transplant(IAvlTree originalBst, IAvlTree replacementBst)
+        private static IAvlTree Transplant(IAvlTree originalBst, IAvlTree replacementBst)
         {
             if (originalBst == originalBst.Parent.Left)
                 originalBst.Parent.Left = replacementBst;
@@ -146,27 +133,6 @@ namespace TreeAlgorithms.AvlTree.Implementations
                 replacementBst.Parent = originalBst.Parent;
 
             return replacementBst;
-        }
-
-        public void PrintSorted() => InOrder(this);
-
-        public void PrintLevelOrder()
-        {
-            var queue = new Queue<IAvlTree>();
-            queue.Enqueue(this);
-
-            while (queue.Any())
-            {
-                var currentTree = queue.Dequeue();
-
-                if (currentTree.HasLeft)
-                    queue.Enqueue(currentTree.Left);
-
-                if (currentTree.HasRight)
-                    queue.Enqueue(currentTree.Right);
-
-                Console.WriteLine(currentTree.Key);
-            }
         }
 
         public int Count()
@@ -194,15 +160,15 @@ namespace TreeAlgorithms.AvlTree.Implementations
         public IAvlTree RightRotate()
         {
             var parent = Parent;
-            this.Parent = Left;
+            Parent = Left;
 
             if (parent != null)
             {
-                this.Parent.Parent = parent;
+                Parent.Parent = parent;
                 Parent.Parent.Left = Parent;
             }
 
-            this.Left = null;
+            Left = null;
             Parent.Right = this;
             return this;
         }
@@ -210,16 +176,16 @@ namespace TreeAlgorithms.AvlTree.Implementations
         public IAvlTree LeftRotate()
         {
             var parent = Parent;
-            this.Parent = Right;
+            Parent = Right;
 
             if (parent != null)
             {
-                this.Parent.Parent = parent;
+                Parent.Parent = parent;
                 Parent.Parent.Right = Parent;
             }
 
             Parent.Left = this;
-            this.Right = null;
+            Right = null;
 
             return this;
         }
@@ -227,13 +193,13 @@ namespace TreeAlgorithms.AvlTree.Implementations
         public IAvlTree RightLeftRotate()
         {
             Right = Right.RightRotate().Parent;
-            return this.LeftRotate().Parent;
+            return LeftRotate().Parent;
         }
 
         public IAvlTree LeftRightRotate()
         {
             Left = Left.LeftRotate().Parent;
-            return this.RightRotate();
+            return RightRotate();
         }
 
         public IAvlTree AvlInsert(int key)
@@ -242,14 +208,10 @@ namespace TreeAlgorithms.AvlTree.Implementations
             var parent = insert.Parent;
 
             while (parent != null && parent.Balance <= 1)
-            {
                 parent = parent.Parent;
-            }
 
             if (parent != null && parent.Balance > 1)
-            {
                 parent.LeftRotate();
-            }
 
             return this;
         }
