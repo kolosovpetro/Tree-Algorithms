@@ -1,6 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using Trees.BinaryTree.Interfaces;
+﻿using Trees.BinaryTree.Interfaces;
 
 namespace Trees.BinaryTree.Implementations
 {
