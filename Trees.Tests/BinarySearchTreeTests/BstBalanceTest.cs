@@ -16,7 +16,7 @@ namespace Trees.Tests.BinarySearchTreeTests
             var v3 = tree.BstInsert(3);
             var v4 = tree.BstInsert(4);
             
-            tree.Root.Balance.Should().Be(1);
+            tree.Balance.Should().Be(1);
             v2.Balance.Should().Be(2);
             v3.Balance.Should().Be(1);
             v4.Balance.Should().Be(0);
@@ -31,7 +31,7 @@ namespace Trees.Tests.BinarySearchTreeTests
             var v4 = tree.BstInsert(6);
             var v5 = tree.BstInsert(8);
 
-            tree.Root.Balance.Should().Be(1);
+            tree.Balance.Should().Be(1);
         }
     }
 }

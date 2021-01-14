@@ -27,7 +27,7 @@ namespace Trees.Tests.BinarySearchTreeTests
             tree.BstInsert(14);
             tree.BstInsert(19);
 
-            tree.Root.Key.Should().Be(50);
+            tree.Key.Should().Be(50);
             tree.Right.Key.Should().Be(72);
             tree.Count.Should().Be(11);
             test.Parent.Key.Should().Be(50);

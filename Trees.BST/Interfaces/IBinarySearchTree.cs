@@ -11,7 +11,6 @@
         IBinarySearchTree Parent { get; set; }
         IBinarySearchTree Left { get; set; }
         IBinarySearchTree Right { get; set; }
-        IBinarySearchTree Root { get; set; }
         IBinarySearchTree GetRoot();
         IBinarySearchTree Search(int key);
         IBinarySearchTree BstInsert(int key);

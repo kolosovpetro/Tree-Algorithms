@@ -6,7 +6,7 @@ namespace Trees.BST.Implementations
     public class BinarySearchTree : IBinarySearchTree
     {
         public int Key { get; set; }
-        public int Balance => Height(Root) - Height(Left);
+        public int Balance => Height(this) - Height(Left);
         public IBinarySearchTree Parent { get; set; }
         public IBinarySearchTree Left { get; set; }
         public IBinarySearchTree Right { get; set; }
@@ -14,12 +14,10 @@ namespace Trees.BST.Implementations
         public bool IsEmpty => !HasLeft && !HasRight;
         public bool HasLeft => Left != null;
         public bool HasRight => Right != null;
-        public IBinarySearchTree Root { get; set; }
 
         public BinarySearchTree(int key)
         {
             Key = key;
-            Root = this;
             Count = 1;
         }
 
@@ -168,21 +166,24 @@ namespace Trees.BST.Implementations
 
         public void PrintSorted()
         {
-            InOrder(Root);
+            InOrder(this);
         }
 
-        private IBinarySearchTree Transplant(IBinarySearchTree originalBst, IBinarySearchTree replacementBst)
+        private static IBinarySearchTree Transplant(IBinarySearchTree originalBst, IBinarySearchTree replacementBst)
         {
-            if (originalBst.Parent == null)
-                Root = replacementBst;
-
-            else if (originalBst == originalBst.Parent.Left)
+            if (originalBst == originalBst.Parent.Left)
+            {
                 originalBst.Parent.Left = replacementBst;
+            }
             else
+            {
                 originalBst.Parent.Right = replacementBst;
+            }
 
             if (replacementBst != null)
+            {
                 replacementBst.Parent = originalBst.Parent;
+            }
 
             return replacementBst;
         }
