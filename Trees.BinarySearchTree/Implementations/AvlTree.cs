@@ -1,4 +1,5 @@
-﻿using Trees.BinarySearchTree.Interfaces;
+﻿using System;
+using Trees.BinarySearchTree.Interfaces;
 
 namespace Trees.BinarySearchTree.Implementations
 {
@@ -18,6 +19,9 @@ namespace Trees.BinarySearchTree.Implementations
 
         public IBinarySearchTree AvlLeftRotate(IBinarySearchTree tree)
         {
+            if (Math.Abs(tree.Balance) < 2 || tree.Right == null)
+                return tree;
+            
             var nodeRight = tree.Right;
 
             if (tree.Parent != null)
@@ -40,17 +44,17 @@ namespace Trees.BinarySearchTree.Implementations
 
         public IBinarySearchTree AvlLeftRightRotate(IBinarySearchTree binarySearchTree)
         {
-            throw new System.NotImplementedException();
+            throw new NotImplementedException();
         }
 
         public IBinarySearchTree AvlRightRotate(IBinarySearchTree binarySearchTree)
         {
-            throw new System.NotImplementedException();
+            throw new NotImplementedException();
         }
 
         public IBinarySearchTree AvlRightLeftRotate(IBinarySearchTree binarySearchTree)
         {
-            throw new System.NotImplementedException();
+            throw new NotImplementedException();
         }
     }
 }
