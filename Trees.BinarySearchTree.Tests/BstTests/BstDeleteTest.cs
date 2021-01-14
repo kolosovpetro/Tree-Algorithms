@@ -2,13 +2,13 @@
 using NUnit.Framework;
 using Trees.BinarySearchTree.Interfaces;
 
-namespace Trees.BinarySearchTree.Tests.Tests
+namespace Trees.BinarySearchTree.Tests.BstTests
 {
     [TestFixture]
-    public class BstMaxTest
+    public class BstDeleteTest
     {
         [Test]
-        public void Bst_Max_Test()
+        public void Bst_Delete_Test()
         {
             IBinarySearchTree tree = new Implementations.BinarySearchTree(50);
             
@@ -26,7 +26,9 @@ namespace Trees.BinarySearchTree.Tests.Tests
             tree.BstInsert(14);
             tree.BstInsert(19);
 
-            tree.Max().Key.Should().Be(76);
+            tree.BstDelete(tree.Right).Key.Should().Be(76);
+            tree.Count.Should().Be(10);
+            tree.Right.Key.Should().Be(76);
         }
     }
 }

@@ -2,13 +2,13 @@
 using NUnit.Framework;
 using Trees.BinarySearchTree.Interfaces;
 
-namespace Trees.BinarySearchTree.Tests.Tests
+namespace Trees.BinarySearchTree.Tests.BstTests
 {
     [TestFixture]
-    public class BstMinTest
+    public class BstSearchTest
     {
         [Test]
-        public void Bst_Min_Test()
+        public void Bst_Search_Test()
         {
             IBinarySearchTree tree = new Implementations.BinarySearchTree(50);
             
@@ -26,7 +26,9 @@ namespace Trees.BinarySearchTree.Tests.Tests
             tree.BstInsert(14);
             tree.BstInsert(19);
 
-            tree.Min().Key.Should().Be(9);
+            tree.Search(14).Should().NotBeNull();
+            tree.Search(14).Key.Should().Be(14);
+            tree.Search(14).Parent.Key.Should().Be(12);
         }
     }
 }

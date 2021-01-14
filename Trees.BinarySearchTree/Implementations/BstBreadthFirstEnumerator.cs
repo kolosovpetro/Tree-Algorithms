@@ -6,7 +6,7 @@ using Trees.BinarySearchTree.Interfaces;
 
 namespace Trees.BinarySearchTree.Implementations
 {
-    public class BstBreadthFirstIterator : IBstEnumerator
+    public class BstBreadthFirstEnumerator : IBstEnumerator
     {
         private readonly IEnumerable<IBinarySearchTree> _treeEnumerable;
         private int _count;
@@ -29,7 +29,7 @@ namespace Trees.BinarySearchTree.Implementations
             GC.SuppressFinalize(this);
         }
         
-        public BstBreadthFirstIterator(IBinarySearchTree tree)
+        public BstBreadthFirstEnumerator(IBinarySearchTree tree)
         {
             _treeEnumerable = new TraversalEngineEngine().BreadthFirstTraversalIterative(tree);
         }

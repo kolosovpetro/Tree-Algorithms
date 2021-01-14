@@ -2,7 +2,7 @@
 
 namespace Trees.BinarySearchTree.Implementations
 {
-    public class BinarySearchTree : IBinarySearchTree, IBstInOrderEnumerable, IBstPostOrderEnumerable,
+    public partial class BinarySearchTree : IBinarySearchTree, IBstInOrderEnumerable, IBstPostOrderEnumerable,
         IBstPreOrderEnumerable, IBstBreadthFirstEnumerable
     {
         public int Key { get; }
@@ -218,7 +218,7 @@ namespace Trees.BinarySearchTree.Implementations
 
         IBstEnumerator IBstBreadthFirstEnumerable.GetEnumerator()
         {
-            return new BstBreadthFirstIterator(this);
+            return new BstBreadthFirstEnumerator(this);
         }
     }
 }

@@ -2,6 +2,7 @@
 {
     public interface IBinarySearchTree
     {
+        // bst functionality
         int Key { get; }
         int Count { get; }
         int Height { get; }
@@ -20,5 +21,12 @@
         IBinarySearchTree Min();
         IBinarySearchTree Successor(IBinarySearchTree binarySearchTree);
         bool IsExternal(IBinarySearchTree tree);
+
+        // avl functionality
+        IBinarySearchTree AvlInsert(int key);
+        IBinarySearchTree AvlLeftRotate(IBinarySearchTree binarySearchTree);
+        IBinarySearchTree AvlLeftRightRotate(IBinarySearchTree binarySearchTree);
+        IBinarySearchTree AvlRightRotate(IBinarySearchTree binarySearchTree);
+        IBinarySearchTree AvlRightLeftRotate(IBinarySearchTree binarySearchTree);
     }
 }

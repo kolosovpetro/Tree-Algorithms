@@ -2,7 +2,7 @@
 using NUnit.Framework;
 using Trees.BinarySearchTree.Interfaces;
 
-namespace Trees.BinarySearchTree.Tests.Tests
+namespace Trees.BinarySearchTree.Tests.BstTests
 {
     [TestFixture]
     public class BstHeightTest
