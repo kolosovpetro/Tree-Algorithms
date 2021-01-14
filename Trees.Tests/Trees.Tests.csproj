@@ -19,7 +19,6 @@
       <Folder Include="BinaryHeapTests\MaxHeapTests" />
       <Folder Include="BinarySearchTreeTests" />
       <Folder Include="BinaryTreeTests" />
-      <Folder Include="ShuntingYardTests" />
     </ItemGroup>
 
     <ItemGroup>
