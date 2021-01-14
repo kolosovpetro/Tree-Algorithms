@@ -23,7 +23,8 @@ namespace Trees.BinarySearchTree.Implementations
                 nodeRight.Parent = nodeParent;
                 nodeParent.Right = nodeRight;
             }
-            
+
+            tree.Right.Parent = tree.Parent;
             tree.Parent = nodeRight;
             tree.Right = null;
             nodeRight.Left = tree;
@@ -43,10 +44,17 @@ namespace Trees.BinarySearchTree.Implementations
         public IBinarySearchTree AvlRightRotate(IBinarySearchTree tree)
         {
             var nodeLeft = tree.Left;
+
+            if (tree.Parent != null)
+            {
+                var parent = tree.Parent;
+                parent.Left = nodeLeft;
+                nodeLeft.Parent = parent;
+            }
+            
             tree.Left = null;
             tree.Parent = nodeLeft;
             nodeLeft.Right = tree;
-            nodeLeft.Parent = null;
             return tree;
         }
 

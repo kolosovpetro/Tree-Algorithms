@@ -7,6 +7,33 @@ namespace Trees.BinarySearchTree.Tests.AvlTests
     public class AvlLeftRotateTest
     {
         [Test]
+        public void AvlTree_LeftRotate_Simple_Test_1()
+        {
+            // this requires left rotation
+            var tree1 = new Implementations.BinarySearchTree(1);
+            var tree2 = tree1.BstInsert(2);
+            var tree3 = tree1.BstInsert(3);
+
+            var rotate = tree1.AvlLeftRotate();
+
+            rotate.Parent.Key.Should().Be(2);
+            rotate.Left.Should().BeNull();
+            rotate.Right.Should().BeNull();
+
+            var parent = rotate.Parent;
+            parent.Key.Should().Be(2);
+            parent.Left.Key.Should().Be(1);
+            parent.Right.Key.Should().Be(3);
+            parent.Parent.Should().BeNull();
+
+            var parentRight = parent.Right;
+            parentRight.Key.Should().Be(3);
+            parentRight.Left.Should().BeNull();
+            parentRight.Right.Should().BeNull();
+            parentRight.Parent.Key.Should().Be(2);
+        }
+        
+        [Test]
         public void AvlTree_LeftRotate_Simple_Test_2()
         {
             // this requires left rotation
