@@ -1,9 +1,9 @@
-﻿using System;
-using Trees.BST.Interfaces;
+﻿using Trees.BinarySearchTree.Interfaces;
 
-namespace Trees.BST.Implementations
+namespace Trees.BinarySearchTree.Implementations
 {
-    public class BinarySearchTree : IBinarySearchTree
+    public class BinarySearchTree : IBinarySearchTree, IBstInOrderEnumerable, IBstPostOrderEnumerable,
+        IBstPreOrderEnumerable, IBstBreadthFirstEnumerable
     {
         public int Key { get; set; }
         public int Balance => Height(this) - Height(Left);
@@ -155,20 +155,7 @@ namespace Trees.BST.Implementations
 
             return height + 1;
         }
-
-        private static void InOrder(IBinarySearchTree binarySearchTree)
-        {
-            if (binarySearchTree == null) return;
-            InOrder(binarySearchTree.Left);
-            Console.Write($"{binarySearchTree.Key} ");
-            InOrder(binarySearchTree.Right);
-        }
-
-        public void PrintSorted()
-        {
-            InOrder(this);
-        }
-
+        
         private static IBinarySearchTree Transplant(IBinarySearchTree originalBst, IBinarySearchTree replacementBst)
         {
             if (originalBst == originalBst.Parent.Left)
@@ -186,6 +173,26 @@ namespace Trees.BST.Implementations
             }
 
             return replacementBst;
+        }
+
+        IBstEnumerator IBstInOrderEnumerable.GetEnumerator()
+        {
+            return new BstInOrderEnumerator(this);
+        }
+
+        IBstEnumerator IBstPostOrderEnumerable.GetEnumerator()
+        {
+            return new BstPostOrderEnumerator(this);
+        }
+
+        IBstEnumerator IBstPreOrderEnumerable.GetEnumerator()
+        {
+            return new BstPreOrderEnumerator(this);
+        }
+
+        IBstEnumerator IBstBreadthFirstEnumerable.GetEnumerator()
+        {
+            return new BstBreadthFirstIterator(this);
         }
     }
 }

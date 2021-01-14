@@ -1,4 +1,4 @@
-﻿namespace Trees.BST.Enumerator.Interfaces
+﻿namespace Trees.BinarySearchTree.Interfaces
 {
     public interface IBstPreOrderEnumerable
     {

@@ -1,7 +1,6 @@
 ﻿using FluentAssertions;
 using NUnit.Framework;
-using Trees.BST.Implementations;
-using Trees.BST.Interfaces;
+using Trees.BinarySearchTree.Interfaces;
 
 namespace Trees.Tests.BinarySearchTreeTests
 {
@@ -11,7 +10,7 @@ namespace Trees.Tests.BinarySearchTreeTests
         [Test]
         public void Bst_Successor_Test()
         {
-            IBinarySearchTree tree = new BinarySearchTree(50);
+            IBinarySearchTree tree = new BinarySearchTree.Implementations.BinarySearchTree(50);
             
             // sub tree 1
             tree.BstInsert(72);

@@ -25,8 +25,8 @@
 
     <ItemGroup>
       <ProjectReference Include="..\Trees.ArithmeticTree\Trees.ArithmeticTree.csproj" />
+      <ProjectReference Include="..\Trees.BinarySearchTree\Trees.BinarySearchTree.csproj" />
       <ProjectReference Include="..\Trees.BinaryTree\Trees.BinaryTree.csproj" />
-      <ProjectReference Include="..\Trees.BST\Trees.BST.csproj" />
       <ProjectReference Include="..\Trees.Heap\Trees.Heap.csproj" />
       <ProjectReference Include="..\Trees.ShuntingYard\Trees.ShuntingYard.csproj" />
     </ItemGroup>

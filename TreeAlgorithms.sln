@@ -2,7 +2,7 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Trees.Tests", "Trees.Tests\Trees.Tests.csproj", "{DFCDB670-E209-4F38-A056-0DEC6A38A4A3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Trees.BST", "Trees.BST\Trees.BST.csproj", "{2C1B6473-AD20-4320-8BBD-3346D266B870}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Trees.BinarySearchTree", "Trees.BinarySearchTree\Trees.BinarySearchTree.csproj", "{2C1B6473-AD20-4320-8BBD-3346D266B870}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Trees.ArithmeticTree", "Trees.ArithmeticTree\Trees.ArithmeticTree.csproj", "{79178DB8-BF44-419F-A68C-6DF56CE9537E}"
 EndProject
@@ -16,11 +16,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Trees.Heap.PriorityQueue", 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Trees.Heap.FloydAlgorithm", "Trees.Heap.FloydAlgorithm\Trees.Heap.FloydAlgorithm.csproj", "{555155D0-B973-496E-903E-1B63FCB9D53E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Trees.BST.Enumerator", "Trees.BST.Enumerator\Trees.BST.Enumerator.csproj", "{C813F7E6-B4DA-4256-9C6A-8CE3CE203D93}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Trees.TraversalEngine", "Trees.TraversalEngine\Trees.TraversalEngine.csproj", "{10960B83-3BD5-4BA5-84AA-37DAC0F5DF07}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Trees.BST.UI", "Trees.BST.UI\Trees.BST.UI.csproj", "{DE7F0F99-5180-4891-974F-B3B14452A240}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Trees.BinarySearchTree.UI", "Trees.BinarySearchTree.UI\Trees.BinarySearchTree.UI.csproj", "{DE7F0F99-5180-4891-974F-B3B14452A240}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Trees.Heap.UI", "Trees.Heap.UI\Trees.Heap.UI.csproj", "{198ED475-D127-420B-9A65-256C004695D1}"
 EndProject
@@ -33,10 +29,6 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Trees.Heap.FloydAlgorithm.UI", "Trees.Heap.FloydAlgorithm.UI\Trees.Heap.FloydAlgorithm.UI.csproj", "{332E1C6A-913F-44A9-B9C1-F6ADDDC384F3}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Trees.Heap.PriorityQueue.UI", "Trees.Heap.PriorityQueue.UI\Trees.Heap.PriorityQueue.UI.csproj", "{95D1E884-1808-46C3-A3AE-73597EAAA8EC}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Trees.TraversalEngine.UI", "Trees.TraversalEngine.UI\Trees.TraversalEngine.UI.csproj", "{D40DDFA1-9F1B-42B9-B1E2-48F6688BB56F}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Trees.BST.Enumerator.UI", "Trees.BST.Enumerator.UI\Trees.BST.Enumerator.UI.csproj", "{A03E9540-2B18-4A2A-BBD0-B3530BEB38E8}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Trees.Heap.Heapsort.UI", "Trees.Heap.Heapsort.UI\Trees.Heap.Heapsort.UI.csproj", "{D7A0E3E5-C8A3-4153-8D93-4599F3CF8DCC}"
 EndProject
@@ -78,14 +70,6 @@ Global
 		{555155D0-B973-496E-903E-1B63FCB9D53E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{555155D0-B973-496E-903E-1B63FCB9D53E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{555155D0-B973-496E-903E-1B63FCB9D53E}.Release|Any CPU.Build.0 = Release|Any CPU
-		{C813F7E6-B4DA-4256-9C6A-8CE3CE203D93}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{C813F7E6-B4DA-4256-9C6A-8CE3CE203D93}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{C813F7E6-B4DA-4256-9C6A-8CE3CE203D93}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{C813F7E6-B4DA-4256-9C6A-8CE3CE203D93}.Release|Any CPU.Build.0 = Release|Any CPU
-		{10960B83-3BD5-4BA5-84AA-37DAC0F5DF07}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{10960B83-3BD5-4BA5-84AA-37DAC0F5DF07}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{10960B83-3BD5-4BA5-84AA-37DAC0F5DF07}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{10960B83-3BD5-4BA5-84AA-37DAC0F5DF07}.Release|Any CPU.Build.0 = Release|Any CPU
 		{DE7F0F99-5180-4891-974F-B3B14452A240}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{DE7F0F99-5180-4891-974F-B3B14452A240}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DE7F0F99-5180-4891-974F-B3B14452A240}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -114,14 +98,6 @@ Global
 		{95D1E884-1808-46C3-A3AE-73597EAAA8EC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{95D1E884-1808-46C3-A3AE-73597EAAA8EC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{95D1E884-1808-46C3-A3AE-73597EAAA8EC}.Release|Any CPU.Build.0 = Release|Any CPU
-		{D40DDFA1-9F1B-42B9-B1E2-48F6688BB56F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{D40DDFA1-9F1B-42B9-B1E2-48F6688BB56F}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{D40DDFA1-9F1B-42B9-B1E2-48F6688BB56F}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{D40DDFA1-9F1B-42B9-B1E2-48F6688BB56F}.Release|Any CPU.Build.0 = Release|Any CPU
-		{A03E9540-2B18-4A2A-BBD0-B3530BEB38E8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{A03E9540-2B18-4A2A-BBD0-B3530BEB38E8}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{A03E9540-2B18-4A2A-BBD0-B3530BEB38E8}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{A03E9540-2B18-4A2A-BBD0-B3530BEB38E8}.Release|Any CPU.Build.0 = Release|Any CPU
 		{D7A0E3E5-C8A3-4153-8D93-4599F3CF8DCC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{D7A0E3E5-C8A3-4153-8D93-4599F3CF8DCC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D7A0E3E5-C8A3-4153-8D93-4599F3CF8DCC}.Release|Any CPU.ActiveCfg = Release|Any CPU

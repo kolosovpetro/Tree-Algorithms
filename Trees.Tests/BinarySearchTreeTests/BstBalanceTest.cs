@@ -1,7 +1,6 @@
 ﻿using FluentAssertions;
 using NUnit.Framework;
-using Trees.BST.Implementations;
-using Trees.BST.Interfaces;
+using Trees.BinarySearchTree.Interfaces;
 
 namespace Trees.Tests.BinarySearchTreeTests
 {
@@ -11,7 +10,7 @@ namespace Trees.Tests.BinarySearchTreeTests
         [Test]
         public void Bst_Balance_Test_1()
         {
-            IBinarySearchTree tree = new BinarySearchTree(50);
+            IBinarySearchTree tree = new BinarySearchTree.Implementations.BinarySearchTree(50);
             var v2 = tree.BstInsert(2);
             var v3 = tree.BstInsert(3);
             var v4 = tree.BstInsert(4);
@@ -25,7 +24,7 @@ namespace Trees.Tests.BinarySearchTreeTests
         [Test]
         public void Bst_Balance_Test_2()
         {
-            IBinarySearchTree tree = new BinarySearchTree(50);
+            IBinarySearchTree tree = new BinarySearchTree.Implementations.BinarySearchTree(50);
             var v2 = tree.BstInsert(11);
             var v3 = tree.BstInsert(9);
             var v4 = tree.BstInsert(6);

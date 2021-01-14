@@ -1,4 +1,4 @@
-﻿namespace Trees.BST.Interfaces
+﻿namespace Trees.BinarySearchTree.Interfaces
 {
     public interface IBinarySearchTree
     {
@@ -20,6 +20,5 @@
         IBinarySearchTree Successor(IBinarySearchTree binarySearchTree);
         bool IsExternal(IBinarySearchTree tree);
         int Height(IBinarySearchTree tree);
-        void PrintSorted();
     }
 }

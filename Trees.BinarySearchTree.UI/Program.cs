@@ -1,18 +1,21 @@
 ﻿using System;
-using Trees.BST.Enumerator.Interfaces;
-using Trees.BST.Enumerator.Trees;
+using Trees.BinarySearchTree.Interfaces;
 
-namespace Trees.BST.Enumerator.UI
+namespace Trees.BST.UI
 {
     public static class Program
     {
         private static void Main()
         {
-            var tree = new EnumerableBst(50);
+            IBinarySearchTree tree = new BinarySearchTree.Implementations.BinarySearchTree(50);
+            
+            // sub tree 1
             tree.BstInsert(72);
             tree.BstInsert(54);
             tree.BstInsert(76);
             tree.BstInsert(67);
+            
+            // sub tree 2
             tree.BstInsert(17);
             tree.BstInsert(12);
             tree.BstInsert(23);
@@ -30,7 +33,7 @@ namespace Trees.BST.Enumerator.UI
             foreach (var node in (IBstPreOrderEnumerable) tree)
                 Console.Write(node.Key + " ");
             Console.WriteLine("\nLevel order: ");
-            foreach (var node in (IBstDepthFirstEnumerable) tree)
+            foreach (var node in (IBstBreadthFirstEnumerable) tree)
                 Console.Write(node.Key + " ");
         }
     }

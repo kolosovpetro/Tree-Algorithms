@@ -2,10 +2,9 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
-using Trees.BST.Enumerator.Interfaces;
-using Trees.BST.Interfaces;
+using Trees.BinarySearchTree.Interfaces;
 
-namespace Trees.BST.Enumerator.Enumerators
+namespace Trees.BinarySearchTree.Implementations
 {
     public class BstPostOrderEnumerator : IBstEnumerator
     {
@@ -23,7 +22,7 @@ namespace Trees.BST.Enumerator.Enumerators
         private int _count;
 
         public BstPostOrderEnumerator(IBinarySearchTree tree) =>
-            _treeEnumerable = new TraversalEngine.Implementations.TraversalEngine().PostOrderTraversalIterative(tree);
+            _treeEnumerable = new TraversalEngineEngine().PostOrderTraversalIterative(tree);
 
         private IBinarySearchTree GetCurrent()
         {

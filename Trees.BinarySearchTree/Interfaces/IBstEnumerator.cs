@@ -1,7 +1,6 @@
 ﻿using System.Collections.Generic;
-using Trees.BST.Interfaces;
 
-namespace Trees.BST.Enumerator.Interfaces
+namespace Trees.BinarySearchTree.Interfaces
 {
     public interface IBstEnumerator : IEnumerator<IBinarySearchTree>
     {

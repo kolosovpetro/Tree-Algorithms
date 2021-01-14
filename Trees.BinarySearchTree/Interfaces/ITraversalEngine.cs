@@ -1,9 +1,8 @@
 ﻿using System.Collections.Generic;
-using Trees.BST.Interfaces;
 
-namespace Trees.TraversalEngine.Interfaces
+namespace Trees.BinarySearchTree.Interfaces
 {
-    public interface ITraversal
+    public interface ITraversalEngine
     {
         IEnumerable<IBinarySearchTree> InOrderTraversalIterative(IBinarySearchTree tree);
         IEnumerable<IBinarySearchTree> PreOrderTraversalIterative(IBinarySearchTree tree);

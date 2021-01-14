@@ -1,13 +1,13 @@
-﻿using System;
+﻿#nullable enable
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
-using Trees.BST.Enumerator.Interfaces;
-using Trees.BST.Interfaces;
+using Trees.BinarySearchTree.Interfaces;
 
-namespace Trees.BST.Enumerator.Enumerators
+namespace Trees.BinarySearchTree.Implementations
 {
-    public class BstBreadthFirstIterator : IBstEnumerator
+    public class BstInOrderEnumerator : IBstEnumerator
     {
         public bool MoveNext() => _count < _treeEnumerable.Count();
 
@@ -22,8 +22,8 @@ namespace Trees.BST.Enumerator.Enumerators
         private readonly IEnumerable<IBinarySearchTree> _treeEnumerable;
         private int _count;
 
-        public BstBreadthFirstIterator(IBinarySearchTree tree) =>
-            _treeEnumerable = new TraversalEngine.Implementations.TraversalEngine().BreadthFirstTraversalIterative(tree);
+        public BstInOrderEnumerator(IBinarySearchTree tree) =>
+            _treeEnumerable = new TraversalEngineEngine().InOrderTraversalIterative(tree);
 
         private IBinarySearchTree GetCurrent()
         {

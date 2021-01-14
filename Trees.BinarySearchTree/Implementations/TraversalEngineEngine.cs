@@ -1,11 +1,10 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
-using Trees.BST.Interfaces;
-using Trees.TraversalEngine.Interfaces;
+using Trees.BinarySearchTree.Interfaces;
 
-namespace Trees.TraversalEngine.Implementations
+namespace Trees.BinarySearchTree.Implementations
 {
-    public class TraversalEngine : ITraversal
+    public class TraversalEngineEngine : ITraversalEngine
     {
         public IEnumerable<IBinarySearchTree> InOrderTraversalIterative(IBinarySearchTree tree)
         {
