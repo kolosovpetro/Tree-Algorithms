@@ -1,15 +1,15 @@
 ﻿using FluentAssertions;
 using NUnit.Framework;
-using Trees.BinaryTree.Implementations;
 using Trees.BinaryTree.Interfaces;
+using Trees.BinaryTree.Implementations;
 
-namespace Trees.Tests.BinaryTreeTests
+namespace Trees.BinaryTree.Tests.BinaryTreeTests
 {
     [TestFixture]
-    public class TreeIsEmptyTest
+    public class TreeDepthTest
     {
         [Test]
-        public void Tree_Is_Empty_Test()
+        public void Tree_Depth_Test()
         {
             IBinaryTree<char> f = new BinaryTree<char>('F');
             IBinaryTree<char> b = new BinaryTree<char>('B');
@@ -30,9 +30,8 @@ namespace Trees.Tests.BinaryTreeTests
             d.AddRight(e);
             i.AddLeft(h);
 
-            f.IsEmpty.Should().BeFalse();
-            h.IsEmpty.Should().BeTrue();
-            a.IsEmpty.Should().BeTrue();
+            f.Depth(c).Should().Be(3);
+            f.Depth(d).Should().Be(2);
         }
     }
 }

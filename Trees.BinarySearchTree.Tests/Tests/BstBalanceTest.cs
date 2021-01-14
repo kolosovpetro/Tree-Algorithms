@@ -2,7 +2,7 @@
 using NUnit.Framework;
 using Trees.BinarySearchTree.Interfaces;
 
-namespace Trees.Tests.BinarySearchTreeTests
+namespace Trees.BinarySearchTree.Tests.Tests
 {
     [TestFixture]
     public class BstBalanceTest
@@ -10,7 +10,7 @@ namespace Trees.Tests.BinarySearchTreeTests
         [Test]
         public void Bst_Balance_Test_1()
         {
-            IBinarySearchTree tree = new BinarySearchTree.Implementations.BinarySearchTree(50);
+            IBinarySearchTree tree = new Implementations.BinarySearchTree(50);
             var v2 = tree.BstInsert(2);
             var v3 = tree.BstInsert(3);
             var v4 = tree.BstInsert(4);

@@ -3,13 +3,13 @@ using NUnit.Framework;
 using Trees.BinaryTree.Implementations;
 using Trees.BinaryTree.Interfaces;
 
-namespace Trees.Tests.BinaryTreeTests
+namespace Trees.BinaryTree.Tests.BinaryTreeTests
 {
     [TestFixture]
-    public class TreeIsInternalTest
+    public class TreeHeightTest
     {
         [Test]
-        public void Tree_Is_Internal_Test()
+        public void Tree_Height_Test()
         {
             IBinaryTree<char> f = new BinaryTree<char>('F');
             IBinaryTree<char> b = new BinaryTree<char>('B');
@@ -30,8 +30,7 @@ namespace Trees.Tests.BinaryTreeTests
             d.AddRight(e);
             i.AddLeft(h);
 
-            f.IsInternal(h).Should().BeFalse();
-            f.IsInternal(d).Should().BeTrue();
+            f.Height(f).Should().Be(3);
         }
     }
 }

@@ -3,7 +3,7 @@ using NUnit.Framework;
 using Trees.BinaryTree.Implementations;
 using Trees.BinaryTree.Interfaces;
 
-namespace Trees.Tests.BinaryTreeTests
+namespace Trees.BinaryTree.Tests.BinaryTreeTests
 {
     [TestFixture]
     public class TreeGetParentTest

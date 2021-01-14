@@ -3,13 +3,13 @@ using NUnit.Framework;
 using Trees.Heap.Implementations;
 using Trees.Heap.Interfaces;
 
-namespace Trees.Tests.BinaryHeapTests.MaxHeapTests
+namespace Trees.Heap.Tests.Tests
 {
     [TestFixture]
-    public class MaxHeapGetRightChildTest
+    public class MaxHeapGetParentTest
     {
         [Test]
-        public void Max_Heap_Get_Right_Child_Test()
+        public void Max_Heap_Get_Parent_Test()
         {
             IBinaryHeap heap = new MaxHeap();
             heap.Push(1);
@@ -19,7 +19,8 @@ namespace Trees.Tests.BinaryHeapTests.MaxHeapTests
             heap.Push(5);
             heap.Push(6);
 
-            heap.GetRightChild(0).Should().Be(5);
+            heap.GetParent(4).Should().Be(4);
+            heap.GetParent(5).Should().Be(5);
         }
     }
 }

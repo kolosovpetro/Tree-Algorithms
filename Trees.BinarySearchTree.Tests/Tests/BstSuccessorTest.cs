@@ -2,7 +2,7 @@
 using NUnit.Framework;
 using Trees.BinarySearchTree.Interfaces;
 
-namespace Trees.Tests.BinarySearchTreeTests
+namespace Trees.BinarySearchTree.Tests.Tests
 {
     [TestFixture]
     public class BstSuccessorTest
@@ -10,7 +10,7 @@ namespace Trees.Tests.BinarySearchTreeTests
         [Test]
         public void Bst_Successor_Test()
         {
-            IBinarySearchTree tree = new BinarySearchTree.Implementations.BinarySearchTree(50);
+            IBinarySearchTree tree = new Implementations.BinarySearchTree(50);
             
             // sub tree 1
             tree.BstInsert(72);

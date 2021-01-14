@@ -2,7 +2,7 @@
 using NUnit.Framework;
 using Trees.ArithmeticTree.Implementation;
 
-namespace Trees.Tests.ArithmeticTreeTests
+namespace Trees.ArithmeticTree.Tests.Tests
 {
     [TestFixture]
     public class ArithmeticTreeTests

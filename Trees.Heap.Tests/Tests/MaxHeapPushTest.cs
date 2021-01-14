@@ -3,7 +3,7 @@ using NUnit.Framework;
 using Trees.Heap.Implementations;
 using Trees.Heap.Interfaces;
 
-namespace Trees.Tests.BinaryHeapTests.MaxHeapTests
+namespace Trees.Heap.Tests.Tests
 {
     [TestFixture]
     public class MaxHeapPushTest

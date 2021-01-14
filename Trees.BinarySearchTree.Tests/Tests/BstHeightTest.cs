@@ -2,15 +2,15 @@
 using NUnit.Framework;
 using Trees.BinarySearchTree.Interfaces;
 
-namespace Trees.Tests.BinarySearchTreeTests
+namespace Trees.BinarySearchTree.Tests.Tests
 {
     [TestFixture]
-    public class BstMaxTest
+    public class BstHeightTest
     {
         [Test]
-        public void Bst_Max_Test()
+        public void Bst_Height_Test()
         {
-            IBinarySearchTree tree = new BinarySearchTree.Implementations.BinarySearchTree(50);
+            IBinarySearchTree tree = new Implementations.BinarySearchTree(50);
             
             // sub tree 1
             tree.BstInsert(72);
@@ -26,7 +26,8 @@ namespace Trees.Tests.BinarySearchTreeTests
             tree.BstInsert(14);
             tree.BstInsert(19);
 
-            tree.Max().Key.Should().Be(76);
+            tree.Height(tree).Should().Be(3);
+            tree.Height(tree.Left).Should().Be(2);
         }
     }
 }
