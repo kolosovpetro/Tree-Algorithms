@@ -14,7 +14,7 @@ namespace Trees.Tests.ArithmeticTreeTests
             var checkPostfix = ShuntingYardAlgorithm.PostfixString(initialEquation);
             checkPostfix.Should().Be("324*5/+");
             var arithmeticTree = ExpressionTree.BuildArithmeticTree(checkPostfix);
-            arithmeticTree.Root.Data.Should().Be('+');
+            arithmeticTree.Data.Should().Be('+');
         }
     }
 }

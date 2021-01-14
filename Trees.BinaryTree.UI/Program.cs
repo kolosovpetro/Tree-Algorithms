@@ -27,23 +27,23 @@ namespace Trees.BinaryTree.UI
             d.AddRight(e);
 
             Console.WriteLine("PreOrder tree traversal: ");
-            f.PreOrderTraversal(f);
+            DisplayTree.PreOrderTraversal(f);
             
             Console.WriteLine();
             Console.WriteLine("InOrder tree traversal: ");
-            f.InOrderTraversal(f);
+            DisplayTree.InOrderTraversal(f);
             
             Console.WriteLine();
             Console.WriteLine("OutOrder tree traversal: ");
-            f.OutOrderTraversal(f);
+            DisplayTree.OutOrderTraversal(f);
             
             Console.WriteLine();
             Console.WriteLine("PostOrder tree traversal: ");
-            f.PostOrderTraversal(f);
+            DisplayTree.PostOrderTraversal(f);
 
             Console.WriteLine();
             Console.WriteLine("LevelOrder tree traversal: ");
-            f.BreadthFirstTreeTraversal(f);
+            DisplayTree.BreadthFirstTreeTraversal(f);
         }
     }
 }

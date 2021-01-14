@@ -1,5 +1,6 @@
 ﻿using System;
 using Trees.ArithmeticTree.Implementation;
+using Trees.BinaryTree.Implementations;
 
 namespace Trees.ArithmeticTree.UI
 {
@@ -14,13 +15,13 @@ namespace Trees.ArithmeticTree.UI
             Console.WriteLine($"Postfix by Shunting-yard: {postfix}");
             var arithmeticTree = ExpressionTree.BuildArithmeticTree(postfix);
             Console.WriteLine("Infix by In-Order traversal: ");
-            arithmeticTree.InOrderTraversal(arithmeticTree.Root);
+            DisplayTree.InOrderTraversal(arithmeticTree);
             Console.WriteLine();
             Console.WriteLine("Postfix notation by Post-Order traversal: ");
-            arithmeticTree.PostOrderTraversal(arithmeticTree.Root);
+            DisplayTree.PostOrderTraversal(arithmeticTree);
             Console.WriteLine();
             Console.WriteLine("Prefix notation by Pre-Order traversal: ");
-            arithmeticTree.PreOrderTraversal(arithmeticTree.Root);
+            DisplayTree.PreOrderTraversal(arithmeticTree);
             Console.WriteLine();
             Console.WriteLine("Infix: ");
             ExpressionTree.PrintInfixExpression(arithmeticTree);
