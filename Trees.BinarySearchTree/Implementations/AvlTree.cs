@@ -12,9 +12,6 @@ namespace Trees.BinarySearchTree.Implementations
 
         public IBinarySearchTree AvlLeftRotate(IBinarySearchTree tree)
         {
-            if (Math.Abs(tree.Balance) < 2 || tree.Right == null)
-                return tree;
-            
             var parent = tree.Parent;
             var right = tree.Right;
             tree.Right = null;
@@ -40,9 +37,6 @@ namespace Trees.BinarySearchTree.Implementations
         
         public IBinarySearchTree AvlRightRotate(IBinarySearchTree tree)
         {
-            if (Math.Abs(tree.Balance) < 2 || tree.Left == null)
-                return tree;
-
             var parent = tree.Parent;
             var left = tree.Left;
             tree.Left = null;
