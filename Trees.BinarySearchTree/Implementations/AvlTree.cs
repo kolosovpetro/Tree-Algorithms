@@ -15,19 +15,16 @@ namespace Trees.BinarySearchTree.Implementations
             if (Math.Abs(tree.Balance) < 2 || tree.Right == null)
                 return tree;
             
-            var nodeRight = tree.Right;
-
-            if (tree.Parent != null)
-            {
-                var nodeParent = tree.Parent;
-                nodeRight.Parent = nodeParent;
-                nodeParent.Right = nodeRight;
-            }
-
-            tree.Right.Parent = tree.Parent;
-            tree.Parent = nodeRight;
+            var parent = tree.Parent;
+            var right = tree.Right;
             tree.Right = null;
-            nodeRight.Left = tree;
+            right.Parent = parent;
+            
+            if (parent != null) 
+                parent.Right = right;
+
+            right.Left = tree;
+            tree.Parent = right;
             return tree;
         }
 
@@ -43,19 +40,19 @@ namespace Trees.BinarySearchTree.Implementations
         
         public IBinarySearchTree AvlRightRotate(IBinarySearchTree tree)
         {
-            var nodeLeft = tree.Left;
+            if (Math.Abs(tree.Balance) < 2 || tree.Left == null)
+                return tree;
 
-            if (tree.Parent != null)
-            {
-                var parent = tree.Parent;
-                parent.Left = nodeLeft;
-                nodeLeft.Parent = parent;
-            }
-
-            tree.Left.Parent = tree.Parent;
-            tree.Parent = nodeLeft;
-            nodeLeft.Right = tree;
+            var parent = tree.Parent;
+            var left = tree.Left;
             tree.Left = null;
+
+            left.Parent = parent;
+            if (parent != null) 
+                parent.Left = left;
+
+            tree.Parent = left;
+            left.Right = tree;
             return tree;
         }
 

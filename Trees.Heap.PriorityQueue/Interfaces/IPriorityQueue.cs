@@ -1,4 +1,4 @@
-﻿namespace PriorityQueue.Interfaces
+﻿namespace Trees.Heap.PriorityQueue.Interfaces
 {
     public interface IPriorityQueue<T>
     {

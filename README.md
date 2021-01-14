@@ -10,6 +10,31 @@ Repository with implementations of various trees and related algorithms.
 - Arithmetic expressions tree
 - AVL tree (Insert method in progress)
 
+## AVL Tree balance pseudocodes
+
+### Left rotation
+- Disengage input three `A`:
+  - Set: `parent = A.Parent`
+  - Set: `right = A.Right`
+  - Set: `A.Right = null`
+- Keep relations
+  - Set: `right.Parent = parent`
+  - Set if `parent != null`: `parent.Right = right`
+  - Set: `right.Left = A`
+  - Set: `A.Parent = right`
+
+### Right rotations
+- Disengage input tree `A`:
+  - Set: `parent = A.Parent`
+  - Set: `left = A.Left`
+  - Set: `A.Left = null`
+- Keep relations
+  - Set: `left.Parent = parent`
+  - Set if `parent != null`: `parent.Left = left`
+  - Set: `A.Parent = left`
+  - Set: `left.Right = A`
+
+
 ## Data Structures Implemented
 
 - Priority Queue (Min, Max)

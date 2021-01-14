@@ -1,4 +1,4 @@
-﻿using PriorityQueue.Interfaces;
+﻿using Trees.Heap.PriorityQueue.Interfaces;
 
 namespace Trees.Heap.PriorityQueue.Implementations
 {
