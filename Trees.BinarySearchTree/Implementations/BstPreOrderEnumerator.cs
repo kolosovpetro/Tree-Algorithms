@@ -8,21 +8,31 @@ namespace Trees.BinarySearchTree.Implementations
 {
     public class BstPreOrderEnumerator : IBstEnumerator
     {
-        public bool MoveNext() => _count < _treeEnumerable.Count();
-
-        public void Reset() => _count = 0;
-
-        public IBinarySearchTree Current => GetCurrent();
-
-        object IEnumerator.Current => Current;
-
-        public void Dispose() => GC.SuppressFinalize(this);
-
         private readonly IEnumerable<IBinarySearchTree> _treeEnumerable;
         private int _count;
+        
+        public IBinarySearchTree Current => GetCurrent();
+        object IEnumerator.Current => Current;
+        
+        public bool MoveNext()
+        {
+            return _count < _treeEnumerable.Count();
+        }
 
-        public BstPreOrderEnumerator(IBinarySearchTree tree) =>
+        public void Reset()
+        {
+            _count = 0;
+        }
+
+        public void Dispose()
+        {
+            GC.SuppressFinalize(this);
+        }
+        
+        public BstPreOrderEnumerator(IBinarySearchTree tree)
+        {
             _treeEnumerable = new TraversalEngineEngine().PreOrderTraversalIterative(tree);
+        }
 
         private IBinarySearchTree GetCurrent()
         {
