@@ -6,12 +6,24 @@ namespace Trees.BinarySearchTree.Implementations
     {
         public IBinarySearchTree AvlInsert(int key)
         {
-            throw new System.NotImplementedException();
+            var insertNode = BstInsert(key);
+            var balance = insertNode.GetRoot().Balance;
+            if (balance > 1)
+            {
+                AvlLeftRotate(insertNode.Parent);
+            }
+
+            return insertNode;
         }
 
         public IBinarySearchTree AvlLeftRotate(IBinarySearchTree binarySearchTree)
         {
-            throw new System.NotImplementedException();
+            var parent = binarySearchTree.Parent;
+            binarySearchTree.Parent = null;
+            parent.Right = null;
+            parent.Parent = binarySearchTree;
+            binarySearchTree.Left = parent;
+            return binarySearchTree;
         }
 
         public IBinarySearchTree AvlLeftRightRotate(IBinarySearchTree binarySearchTree)
