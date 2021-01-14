@@ -37,10 +37,12 @@ namespace Trees.BST.Implementations
 
         public IBinarySearchTree Search(int key)
         {
-            var currentNode = Root;
+            IBinarySearchTree currentNode = this;
 
             while (currentNode != null && currentNode.Key != key)
-                currentNode = key < currentNode.Key ? currentNode.Left : currentNode.Right;
+                currentNode = key < currentNode.Key
+                    ? currentNode.Left
+                    : currentNode.Right;
 
             return currentNode;
         }
@@ -48,24 +50,26 @@ namespace Trees.BST.Implementations
         public IBinarySearchTree BstInsert(int key)
         {
             IBinarySearchTree currentParent = null;
-            var currentNode = Root;
+            IBinarySearchTree currentNode = this;
 
             while (currentNode != null)
             {
                 currentParent = currentNode;
-                currentNode = key <= currentNode.Key 
-                    ? currentNode.Left 
+                currentNode = key <= currentNode.Key
+                    ? currentNode.Left
                     : currentNode.Right;
             }
 
             currentNode = new BinarySearchTree(key) {Parent = currentParent};
 
-            if (currentParent == null)
-                Root = currentNode;
-            else if (key <= currentParent.Key)
+            if (key <= currentParent.Key)
+            {
                 currentParent.Left = currentNode;
+            }
             else
+            {
                 currentParent.Right = currentNode;
+            }
 
             Count++;
             return currentNode;
@@ -97,20 +101,24 @@ namespace Trees.BST.Implementations
 
         public IBinarySearchTree Max()
         {
-            var node = Root;
+            IBinarySearchTree node = this;
 
             while (node.Right != null)
+            {
                 node = node.Right;
+            }
 
             return node;
         }
 
         public IBinarySearchTree Min()
         {
-            var node = Root;
+            IBinarySearchTree node = this;
 
             while (node.Left != null)
+            {
                 node = node.Left;
+            }
 
             return node;
         }
