@@ -23,6 +23,18 @@ namespace Trees.BST.Implementations
             Count = 1;
         }
 
+        public IBinarySearchTree GetRoot()
+        {
+            var current = Parent;
+
+            while (current.Parent != null)
+            {
+                current = current.Parent;
+            }
+
+            return current;
+        }
+
         public IBinarySearchTree Search(int key)
         {
             var currentNode = Root;
@@ -41,7 +53,9 @@ namespace Trees.BST.Implementations
             while (currentNode != null)
             {
                 currentParent = currentNode;
-                currentNode = key <= currentNode.Key ? currentNode.Left : currentNode.Right;
+                currentNode = key <= currentNode.Key 
+                    ? currentNode.Left 
+                    : currentNode.Right;
             }
 
             currentNode = new BinarySearchTree(key) {Parent = currentParent};
@@ -117,7 +131,10 @@ namespace Trees.BST.Implementations
             return currentParent;
         }
 
-        public bool IsExternal(IBinarySearchTree tree) => tree.IsEmpty;
+        public bool IsExternal(IBinarySearchTree tree)
+        {
+            return tree.IsEmpty;
+        }
 
         public int Height(IBinarySearchTree tree)
         {
@@ -141,7 +158,10 @@ namespace Trees.BST.Implementations
             InOrder(binarySearchTree.Right);
         }
 
-        public void PrintSorted() => InOrder(Root);
+        public void PrintSorted()
+        {
+            InOrder(Root);
+        }
 
         private IBinarySearchTree Transplant(IBinarySearchTree originalBst, IBinarySearchTree replacementBst)
         {
