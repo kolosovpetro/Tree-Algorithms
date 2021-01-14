@@ -37,9 +37,11 @@ namespace Trees.BinarySearchTree.Tests.Tests
         public void Bst_Height_Simple_Test()
         {
             IBinarySearchTree root = new Implementations.BinarySearchTree(2);
-            root.BstInsert(3);
-            root.BstInsert(4);
+            var b1 = root.BstInsert(3);
+            var b2 = root.BstInsert(4);
             root.Height.Should().Be(2);
+            b1.Height.Should().Be(1);
+            b2.Height.Should().Be(0);
         }
     }
 }

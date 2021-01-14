@@ -193,7 +193,12 @@ namespace Trees.BinarySearchTree.Implementations
                 return -tree.Height;
             }
 
-            return tree.Height;
+            if (tree.HasRight)
+            {
+                return tree.Height;
+            }
+
+            return 0;
         }
 
         IBstEnumerator IBstInOrderEnumerable.GetEnumerator()
