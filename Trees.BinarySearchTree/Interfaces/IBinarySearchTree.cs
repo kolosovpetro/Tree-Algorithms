@@ -2,8 +2,9 @@
 {
     public interface IBinarySearchTree
     {
-        int Key { get; set; }
+        int Key { get; }
         int Count { get; }
+        int Height { get; }
         bool IsEmpty { get; }
         bool HasLeft { get; }
         bool HasRight { get; }
@@ -19,6 +20,5 @@
         IBinarySearchTree Min();
         IBinarySearchTree Successor(IBinarySearchTree binarySearchTree);
         bool IsExternal(IBinarySearchTree tree);
-        int Height(IBinarySearchTree tree);
     }
 }

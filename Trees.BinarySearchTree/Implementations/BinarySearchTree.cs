@@ -5,12 +5,13 @@ namespace Trees.BinarySearchTree.Implementations
     public class BinarySearchTree : IBinarySearchTree, IBstInOrderEnumerable, IBstPostOrderEnumerable,
         IBstPreOrderEnumerable, IBstBreadthFirstEnumerable
     {
-        public int Key { get; set; }
-        public int Balance => Height(this) - Height(Left);
+        public int Key { get; }
+        public int Balance => CalculateBalance(this);
         public IBinarySearchTree Parent { get; set; }
         public IBinarySearchTree Left { get; set; }
         public IBinarySearchTree Right { get; set; }
         public int Count { get; private set; }
+        public int Height => GetHeight(this);
         public bool IsEmpty => !HasLeft && !HasRight;
         public bool HasLeft => Left != null;
         public bool HasRight => Right != null;
@@ -142,16 +143,16 @@ namespace Trees.BinarySearchTree.Implementations
             return tree.IsEmpty;
         }
 
-        public int Height(IBinarySearchTree tree)
+        private int GetHeight(IBinarySearchTree tree)
         {
             if (tree == null) return 0;
             if (IsExternal(tree)) return 0;
             var height = 0;
 
             if (tree.HasLeft)
-                height = height > Height(tree.Left) ? height : Height(tree.Left);
+                height = height > GetHeight(tree.Left) ? height : GetHeight(tree.Left);
             if (tree.HasRight)
-                height = height > Height(tree.Right) ? height : Height(tree.Right);
+                height = height > GetHeight(tree.Right) ? height : GetHeight(tree.Right);
 
             return height + 1;
         }
@@ -173,6 +174,26 @@ namespace Trees.BinarySearchTree.Implementations
             }
 
             return replacementBst;
+        }
+        
+        private static int CalculateBalance(IBinarySearchTree tree)
+        {
+            if (tree == null)
+            {
+                return 0;
+            }
+
+            if (tree.HasRight && tree.HasLeft)
+            {
+                return tree.Right.Height - tree.Left.Height;
+            }
+
+            if (tree.HasLeft)
+            {
+                return -tree.Height;
+            }
+
+            return tree.Height;
         }
 
         IBstEnumerator IBstInOrderEnumerable.GetEnumerator()

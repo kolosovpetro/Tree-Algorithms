@@ -38,6 +38,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Trees.BinaryTree.Tests", "T
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Trees.BinarySearchTree.Tests", "Trees.BinarySearchTree.Tests\Trees.BinarySearchTree.Tests.csproj", "{186E79D7-C21A-4A84-81BF-4B9439EDF621}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Trees.AVL.Tests", "Trees.AVL.Tests\Trees.AVL.Tests.csproj", "{6562C563-A9BB-4B46-BC5A-5FDB9FA2F15C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -120,5 +122,9 @@ Global
 		{186E79D7-C21A-4A84-81BF-4B9439EDF621}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{186E79D7-C21A-4A84-81BF-4B9439EDF621}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{186E79D7-C21A-4A84-81BF-4B9439EDF621}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6562C563-A9BB-4B46-BC5A-5FDB9FA2F15C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6562C563-A9BB-4B46-BC5A-5FDB9FA2F15C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6562C563-A9BB-4B46-BC5A-5FDB9FA2F15C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6562C563-A9BB-4B46-BC5A-5FDB9FA2F15C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

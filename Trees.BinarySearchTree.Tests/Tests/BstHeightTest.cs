@@ -26,8 +26,20 @@ namespace Trees.BinarySearchTree.Tests.Tests
             tree.BstInsert(14);
             tree.BstInsert(19);
 
-            tree.Height(tree).Should().Be(3);
-            tree.Height(tree.Left).Should().Be(2);
+            tree.Height.Should().Be(3);
+            tree.Left.Height.Should().Be(2);
+
+            var balance = tree.Left.Height - tree.Right.Height;
+            balance.Should().Be(0);
+        }
+
+        [Test]
+        public void Bst_Height_Simple_Test()
+        {
+            IBinarySearchTree root = new Implementations.BinarySearchTree(2);
+            root.BstInsert(3);
+            root.BstInsert(4);
+            root.Height.Should().Be(2);
         }
     }
 }
