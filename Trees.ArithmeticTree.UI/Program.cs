@@ -1,5 +1,5 @@
 ﻿using System;
-using Trees.ShuntingYard.Implementation;
+using Trees.ArithmeticTree.Implementation;
 
 namespace Trees.ArithmeticTree.UI
 {
@@ -7,12 +7,12 @@ namespace Trees.ArithmeticTree.UI
     {
         private static void Main()
         {
-            var infix = "3+2*4/5";
+            const string infix = "3+2*4/5";
             Console.WriteLine($"Initial infix: {infix}");
             // 324*5/+
-            var postfix = ShuntingYardMethod.PostfixString(infix);
+            var postfix = ShuntingYardAlgorithm.PostfixString(infix);
             Console.WriteLine($"Postfix by Shunting-yard: {postfix}");
-            var arithmeticTree = Trees.ArithmeticTree.Implementation.ExpressionTree.BuildArithmeticTree(postfix);
+            var arithmeticTree = ExpressionTree.BuildArithmeticTree(postfix);
             Console.WriteLine("Infix by In-Order traversal: ");
             arithmeticTree.InOrderTraversal(arithmeticTree.Root);
             Console.WriteLine();
@@ -23,7 +23,7 @@ namespace Trees.ArithmeticTree.UI
             arithmeticTree.PreOrderTraversal(arithmeticTree.Root);
             Console.WriteLine();
             Console.WriteLine("Infix: ");
-            Trees.ArithmeticTree.Implementation.ExpressionTree.PrintInfixExpression(arithmeticTree);
+            ExpressionTree.PrintInfixExpression(arithmeticTree);
         }
     }
 }

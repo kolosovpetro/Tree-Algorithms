@@ -8,7 +8,6 @@
 
     <ItemGroup>
       <ProjectReference Include="..\Trees.ArithmeticTree\Trees.ArithmeticTree.csproj" />
-      <ProjectReference Include="..\Trees.ShuntingYard\Trees.ShuntingYard.csproj" />
     </ItemGroup>
 
 </Project>

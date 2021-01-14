@@ -1,11 +1,11 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using static Trees.ShuntingYard.Implementation.Operator;
+using static Trees.ArithmeticTree.Implementation.Operator;
 
-namespace Trees.ShuntingYard.Implementation
+namespace Trees.ArithmeticTree.Implementation
 {
-    public static class ShuntingYardMethod
+    public static class ShuntingYardAlgorithm
     {
         public static Queue<char> ShuntingYard(string input)
         {

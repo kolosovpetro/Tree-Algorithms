@@ -1,8 +1,8 @@
 ﻿using FluentAssertions;
 using NUnit.Framework;
-using Trees.ShuntingYard.Implementation;
+using Trees.ArithmeticTree.Implementation;
 
-namespace Trees.Tests.ShuntingYardTests
+namespace Trees.Tests.ArithmeticTreeTests
 {
     [TestFixture]
     public class PostfixEvaluatorTests
@@ -20,11 +20,11 @@ namespace Trees.Tests.ShuntingYardTests
         public void PostfixEvaluatorTest()
         {
             // 3 + 4 * 5 = 23
-            var queue = ShuntingYardMethod.ShuntingYard("3+4*5");
+            var queue = ShuntingYardAlgorithm.ShuntingYard("3+4*5");
             PostfixEvaluator.EvaluatePostfix(queue).Should().Be(23);
 
             // 3 * (4 + 5) = 27
-            queue = ShuntingYardMethod.ShuntingYard("3*(4+5)");
+            queue = ShuntingYardAlgorithm.ShuntingYard("3*(4+5)");
             PostfixEvaluator.EvaluatePostfix(queue).Should().Be(27);
         }
     }

@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Linq;
 
-namespace Trees.ShuntingYard.Implementation
+namespace Trees.ArithmeticTree.Implementation
 {
     public static class Operator
     {

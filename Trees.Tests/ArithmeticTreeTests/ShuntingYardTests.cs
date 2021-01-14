@@ -1,9 +1,9 @@
 ﻿using System;
 using FluentAssertions;
 using NUnit.Framework;
-using Trees.ShuntingYard.Implementation;
+using Trees.ArithmeticTree.Implementation;
 
-namespace Trees.Tests.ShuntingYardTests
+namespace Trees.Tests.ArithmeticTreeTests
 {
     [TestFixture]
     public class ShuntingYardTests
@@ -44,7 +44,7 @@ namespace Trees.Tests.ShuntingYardTests
         [Test]
         public void InfixToPostfixTest()
         {
-            var queue = ShuntingYardMethod.ShuntingYard("3+2*4/5");
+            var queue = ShuntingYardAlgorithm.ShuntingYard("3+2*4/5");
             queue.Dequeue().Should().Be('3');
             queue.Dequeue().Should().Be('2');
             queue.Dequeue().Should().Be('4');
@@ -53,21 +53,21 @@ namespace Trees.Tests.ShuntingYardTests
             queue.Dequeue().Should().Be('/');
             queue.Dequeue().Should().Be('+');
 
-            queue = ShuntingYardMethod.ShuntingYard("3+4*5");
+            queue = ShuntingYardAlgorithm.ShuntingYard("3+4*5");
             queue.Dequeue().Should().Be('3');
             queue.Dequeue().Should().Be('4');
             queue.Dequeue().Should().Be('5');
             queue.Dequeue().Should().Be('*');
             queue.Dequeue().Should().Be('+');
 
-            queue = ShuntingYardMethod.ShuntingYard("3*(4+5)");
+            queue = ShuntingYardAlgorithm.ShuntingYard("3*(4+5)");
             queue.Dequeue().Should().Be('3');
             queue.Dequeue().Should().Be('4');
             queue.Dequeue().Should().Be('5');
             queue.Dequeue().Should().Be('+');
             queue.Dequeue().Should().Be('*');
 
-            queue = ShuntingYardMethod.ShuntingYard("3+4*2/(1-5)^2^3");
+            queue = ShuntingYardAlgorithm.ShuntingYard("3+4*2/(1-5)^2^3");
             // 3 4 2 × 1 5 − 2 3 ^ ^ ÷ +
             queue.Dequeue().Should().Be('3');
             queue.Dequeue().Should().Be('4');
@@ -83,7 +83,7 @@ namespace Trees.Tests.ShuntingYardTests
             queue.Dequeue().Should().Be('/');
             queue.Dequeue().Should().Be('+');
 
-            queue = ShuntingYardMethod.ShuntingYard("3-2+1");
+            queue = ShuntingYardAlgorithm.ShuntingYard("3-2+1");
             queue.Dequeue().Should().Be('3');
             queue.Dequeue().Should().Be('2');
             queue.Dequeue().Should().Be('-');

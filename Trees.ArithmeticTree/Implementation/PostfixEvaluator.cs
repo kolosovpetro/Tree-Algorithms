@@ -2,7 +2,7 @@
 using System.Linq;
 using static System.Math;
 
-namespace Trees.ShuntingYard.Implementation
+namespace Trees.ArithmeticTree.Implementation
 {
     public static class PostfixEvaluator
     {
