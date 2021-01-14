@@ -24,7 +24,7 @@ namespace Trees.BinarySearchTree.Implementations
 
         public IBinarySearchTree GetRoot()
         {
-            var current = Parent;
+            IBinarySearchTree current = this;
 
             while (current.Parent != null)
             {
