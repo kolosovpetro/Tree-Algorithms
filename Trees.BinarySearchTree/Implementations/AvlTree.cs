@@ -10,20 +10,27 @@ namespace Trees.BinarySearchTree.Implementations
             var balance = insertNode.GetRoot().Balance;
             if (balance > 1)
             {
-                AvlLeftRotate(insertNode.Parent);
+                insertNode.Parent.AvlLeftRotate();
             }
 
             return insertNode;
         }
 
-        public IBinarySearchTree AvlLeftRotate(IBinarySearchTree binarySearchTree)
+        public IBinarySearchTree AvlLeftRotate(IBinarySearchTree tree)
         {
-            var parent = binarySearchTree.Parent;
-            binarySearchTree.Parent = null;
-            parent.Right = null;
-            parent.Parent = binarySearchTree;
-            binarySearchTree.Left = parent;
-            return binarySearchTree;
+            var nodeRight = tree.Right;
+            var nodeParent = tree.Parent;
+            tree.Parent = nodeRight;
+            tree.Right = null;
+            nodeRight.Parent = nodeParent;
+            nodeRight.Left = tree;
+            nodeParent.Right = nodeRight;
+            return tree;
+        }
+
+        public IBinarySearchTree AvlLeftRotate()
+        {
+            return AvlLeftRotate(this);
         }
 
         public IBinarySearchTree AvlLeftRightRotate(IBinarySearchTree binarySearchTree)

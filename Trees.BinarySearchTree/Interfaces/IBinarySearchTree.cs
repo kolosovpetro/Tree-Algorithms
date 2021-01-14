@@ -24,7 +24,8 @@
 
         // avl functionality
         IBinarySearchTree AvlInsert(int key);
-        IBinarySearchTree AvlLeftRotate(IBinarySearchTree binarySearchTree);
+        IBinarySearchTree AvlLeftRotate(IBinarySearchTree tree);
+        IBinarySearchTree AvlLeftRotate();
         IBinarySearchTree AvlLeftRightRotate(IBinarySearchTree binarySearchTree);
         IBinarySearchTree AvlRightRotate(IBinarySearchTree binarySearchTree);
         IBinarySearchTree AvlRightLeftRotate(IBinarySearchTree binarySearchTree);
