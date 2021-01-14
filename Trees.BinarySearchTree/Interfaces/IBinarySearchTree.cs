@@ -26,8 +26,9 @@
         IBinarySearchTree AvlInsert(int key);
         IBinarySearchTree AvlLeftRotate(IBinarySearchTree tree);
         IBinarySearchTree AvlLeftRotate();
-        IBinarySearchTree AvlLeftRightRotate(IBinarySearchTree binarySearchTree);
-        IBinarySearchTree AvlRightRotate(IBinarySearchTree binarySearchTree);
+        IBinarySearchTree AvlRightRotate(IBinarySearchTree tree);
+        IBinarySearchTree AvlRightRotate();
+        IBinarySearchTree AvlLeftRightRotate(IBinarySearchTree tree);
         IBinarySearchTree AvlRightLeftRotate(IBinarySearchTree binarySearchTree);
     }
 }

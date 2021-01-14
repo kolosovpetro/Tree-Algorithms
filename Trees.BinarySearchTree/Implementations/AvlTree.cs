@@ -7,14 +7,7 @@ namespace Trees.BinarySearchTree.Implementations
     {
         public IBinarySearchTree AvlInsert(int key)
         {
-            var insertNode = BstInsert(key);
-            var balance = insertNode.GetRoot().Balance;
-            if (balance > 1)
-            {
-                insertNode.Parent.AvlLeftRotate();
-            }
-
-            return insertNode;
+            throw new NotImplementedException();
         }
 
         public IBinarySearchTree AvlLeftRotate(IBinarySearchTree tree)
@@ -42,12 +35,22 @@ namespace Trees.BinarySearchTree.Implementations
             return AvlLeftRotate(this);
         }
 
-        public IBinarySearchTree AvlLeftRightRotate(IBinarySearchTree binarySearchTree)
+        public IBinarySearchTree AvlRightRotate()
         {
-            throw new NotImplementedException();
+            return AvlRightRotate(this);
+        }
+        
+        public IBinarySearchTree AvlRightRotate(IBinarySearchTree tree)
+        {
+            var nodeLeft = tree.Left;
+            tree.Left = null;
+            tree.Parent = nodeLeft;
+            nodeLeft.Right = tree;
+            nodeLeft.Parent = null;
+            return tree;
         }
 
-        public IBinarySearchTree AvlRightRotate(IBinarySearchTree binarySearchTree)
+        public IBinarySearchTree AvlLeftRightRotate(IBinarySearchTree tree)
         {
             throw new NotImplementedException();
         }
