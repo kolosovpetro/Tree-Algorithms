@@ -51,10 +51,11 @@ namespace Trees.BinarySearchTree.Implementations
                 parent.Left = nodeLeft;
                 nodeLeft.Parent = parent;
             }
-            
-            tree.Left = null;
+
+            tree.Left.Parent = tree.Parent;
             tree.Parent = nodeLeft;
             nodeLeft.Right = tree;
+            tree.Left = null;
             return tree;
         }
 
