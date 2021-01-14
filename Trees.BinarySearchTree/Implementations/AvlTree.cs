@@ -19,12 +19,17 @@ namespace Trees.BinarySearchTree.Implementations
         public IBinarySearchTree AvlLeftRotate(IBinarySearchTree tree)
         {
             var nodeRight = tree.Right;
-            var nodeParent = tree.Parent;
+
+            if (tree.Parent != null)
+            {
+                var nodeParent = tree.Parent;
+                nodeRight.Parent = nodeParent;
+                nodeParent.Right = nodeRight;
+            }
+            
             tree.Parent = nodeRight;
             tree.Right = null;
-            nodeRight.Parent = nodeParent;
             nodeRight.Left = tree;
-            nodeParent.Right = nodeRight;
             return tree;
         }
 
