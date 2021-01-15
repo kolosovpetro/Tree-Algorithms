@@ -1,5 +1,4 @@
-﻿using System;
-using Trees.BinarySearchTree.Interfaces;
+﻿using Trees.BinarySearchTree.Interfaces;
 
 namespace Trees.BinarySearchTree.Implementations
 {
@@ -7,7 +6,9 @@ namespace Trees.BinarySearchTree.Implementations
     {
         public IBinarySearchTree AvlInsert(int key)
         {
-            throw new NotImplementedException();
+            var insertNode = BstInsert(key);
+            var balance = insertNode.GetRoot().Balance;
+            return balance > 1 ? insertNode.Parent.AvlLeftRotate() : insertNode;
         }
 
         public IBinarySearchTree AvlLeftRotate(IBinarySearchTree tree)

@@ -8,7 +8,6 @@ namespace Trees.BST.UI
         private static void Main()
         {
             IBinarySearchTree tree = new BinarySearchTree.Implementations.BinarySearchTree(50);
-            
             // sub tree 1
             tree.BstInsert(72);
             tree.BstInsert(54);
