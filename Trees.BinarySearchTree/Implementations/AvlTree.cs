@@ -17,8 +17,17 @@ namespace Trees.BinarySearchTree.Implementations
             tree.Right = null;
             right.Parent = parent;
             
-            if (parent != null) 
-                parent.Right = right;
+            if (parent != null)
+            {
+                if (parent.Right == tree)
+                {
+                    parent.Right = right;
+                }
+                else
+                {
+                    parent.Left = right;
+                }
+            }
 
             right.Left = tree;
             tree.Parent = right;
