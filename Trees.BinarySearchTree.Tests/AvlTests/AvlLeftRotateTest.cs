@@ -82,5 +82,30 @@ namespace Trees.BinarySearchTree.Tests.AvlTests
             tree2.Left.Should().Be(tree1);
             tree2.Right.Should().BeNull();
         }
+        
+        [Test]
+        public void AvlTree_LeftRotation_Test_5()
+        {
+            var tree1 = new Implementations.BinarySearchTree(45);
+            var tree2 = tree1.BstInsert(13);
+            var tree3 = tree1.BstInsert(29);
+
+            var rotate = tree2.AvlLeftRotate();
+            rotate.Key.Should().Be(13);
+            rotate.Left.Should().BeNull();
+            rotate.Right.Should().BeNull();
+            rotate.Parent.Should().Be(tree3);
+
+            var parent = rotate.Parent;
+            parent.Key.Should().Be(29);
+            parent.Left.Should().Be(tree2);
+            parent.Right.Should().BeNull();
+            parent.Parent.Should().Be(tree1);
+
+            var grandParent = parent.Parent;
+            grandParent.Parent.Should().BeNull();
+            grandParent.Right.Should().BeNull();
+            grandParent.Left.Should().Be(tree3);
+        }
     }
 }
