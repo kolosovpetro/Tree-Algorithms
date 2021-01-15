@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using Trees.Heap.PriorityQueue.Interfaces;
+using Trees.Heap.Interfaces;
 
-namespace Trees.Heap.PriorityQueue.Implementations
+namespace Trees.Heap.PriorityQueue
 {
     public class MaxPriorityQueue<T> : IPriorityQueue<T>
     {

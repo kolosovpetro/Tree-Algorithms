@@ -1,5 +1,4 @@
 ﻿using System;
-using Trees.Heap.PriorityQueue.Implementations;
 
 namespace Trees.Heap.PriorityQueue.UI
 {

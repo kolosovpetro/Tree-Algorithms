@@ -1,4 +1,4 @@
-﻿namespace Trees.Heap.PriorityQueue.Implementations
+﻿namespace Trees.Heap.PriorityQueue
 {
     public class MinPriorityQueue<T> : MaxPriorityQueue<T>
     {

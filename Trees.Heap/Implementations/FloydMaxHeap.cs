@@ -1,7 +1,6 @@
 ﻿using System.Linq;
-using Trees.Heap.Implementations;
 
-namespace Trees.Heap.FloydAlgorithm.Implementation
+namespace Trees.Heap.Implementations
 {
     public class FloydMaxHeap : MaxHeap
     {

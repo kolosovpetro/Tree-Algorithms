@@ -1,6 +1,6 @@
-﻿using Trees.Heap.PriorityQueue.Interfaces;
+﻿using Trees.Heap.Interfaces;
 
-namespace Trees.Heap.PriorityQueue.Implementations
+namespace Trees.Heap.PriorityQueue
 {
     public class PriorityQueueNode<T> : IPriorityQueueNode<T>
     {

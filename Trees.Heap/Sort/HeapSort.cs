@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
-using Trees.Heap.FloydAlgorithm.Implementation;
+using Trees.Heap.Implementations;
 
-namespace Trees.Heap.Heapsort.HeapSort
+namespace Trees.Heap.Sort
 {
     public static class HeapSort
     {

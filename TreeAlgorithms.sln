@@ -8,12 +8,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Trees.BinaryTree", "Trees.B
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Trees.Heap", "Trees.Heap\Trees.Heap.csproj", "{E81A73F0-12A6-48FF-8616-F3141D61ECDF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Trees.Heap.Heapsort", "Trees.Heap.Heapsort\Trees.Heap.Heapsort.csproj", "{AE48AE9D-5153-4F0D-A8E7-5A9D2EAF16AA}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Trees.Heap.PriorityQueue", "Trees.Heap.PriorityQueue\Trees.Heap.PriorityQueue.csproj", "{13F06B9B-3134-4BA8-948B-E72795BEB682}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Trees.Heap.FloydAlgorithm", "Trees.Heap.FloydAlgorithm\Trees.Heap.FloydAlgorithm.csproj", "{555155D0-B973-496E-903E-1B63FCB9D53E}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Trees.BinarySearchTree.UI", "Trees.BinarySearchTree.UI\Trees.BinarySearchTree.UI.csproj", "{DE7F0F99-5180-4891-974F-B3B14452A240}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Trees.Heap.UI", "Trees.Heap.UI\Trees.Heap.UI.csproj", "{198ED475-D127-420B-9A65-256C004695D1}"
@@ -58,18 +52,6 @@ Global
 		{E81A73F0-12A6-48FF-8616-F3141D61ECDF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E81A73F0-12A6-48FF-8616-F3141D61ECDF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E81A73F0-12A6-48FF-8616-F3141D61ECDF}.Release|Any CPU.Build.0 = Release|Any CPU
-		{AE48AE9D-5153-4F0D-A8E7-5A9D2EAF16AA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{AE48AE9D-5153-4F0D-A8E7-5A9D2EAF16AA}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{AE48AE9D-5153-4F0D-A8E7-5A9D2EAF16AA}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{AE48AE9D-5153-4F0D-A8E7-5A9D2EAF16AA}.Release|Any CPU.Build.0 = Release|Any CPU
-		{13F06B9B-3134-4BA8-948B-E72795BEB682}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{13F06B9B-3134-4BA8-948B-E72795BEB682}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{13F06B9B-3134-4BA8-948B-E72795BEB682}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{13F06B9B-3134-4BA8-948B-E72795BEB682}.Release|Any CPU.Build.0 = Release|Any CPU
-		{555155D0-B973-496E-903E-1B63FCB9D53E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{555155D0-B973-496E-903E-1B63FCB9D53E}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{555155D0-B973-496E-903E-1B63FCB9D53E}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{555155D0-B973-496E-903E-1B63FCB9D53E}.Release|Any CPU.Build.0 = Release|Any CPU
 		{DE7F0F99-5180-4891-974F-B3B14452A240}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{DE7F0F99-5180-4891-974F-B3B14452A240}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DE7F0F99-5180-4891-974F-B3B14452A240}.Release|Any CPU.ActiveCfg = Release|Any CPU

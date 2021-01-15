@@ -1,5 +1,5 @@
 ﻿using System;
-using Trees.Heap.FloydAlgorithm.Implementation;
+using Trees.Heap.Implementations;
 
 namespace Trees.Heap.FloydAlgorithm.UI
 {

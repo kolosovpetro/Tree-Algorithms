@@ -8,6 +8,7 @@
 
     <ItemGroup>
       <ProjectReference Include="..\Trees.Heap.PriorityQueue\Trees.Heap.PriorityQueue.csproj" />
+      <ProjectReference Include="..\Trees.Heap\Trees.Heap.csproj" />
     </ItemGroup>
 
 </Project>
