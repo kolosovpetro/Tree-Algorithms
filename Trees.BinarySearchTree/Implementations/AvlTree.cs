@@ -52,7 +52,14 @@ namespace Trees.BinarySearchTree.Implementations
 
         public IBinarySearchTree AvlLeftRightRotate(IBinarySearchTree tree)
         {
-            throw new NotImplementedException();
+            var parent = tree.Parent;
+            tree.AvlLeftRotate();
+            return parent.AvlRightRotate();
+        }
+
+        public IBinarySearchTree AvlLeftRightRotate()
+        {
+            return AvlLeftRightRotate(this);
         }
 
         public IBinarySearchTree AvlRightLeftRotate(IBinarySearchTree binarySearchTree)
