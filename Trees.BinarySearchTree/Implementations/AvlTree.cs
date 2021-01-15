@@ -70,8 +70,9 @@ namespace Trees.BinarySearchTree.Implementations
 
         public IBinarySearchTree AvlLeftRightRotate(IBinarySearchTree tree)
         {
-            var rotate = tree.AvlLeftRotate();
-            return rotate.Parent.Parent.AvlRightRotate();
+            var parent = tree.Parent;
+            tree.AvlLeftRotate();
+            return parent.AvlRightRotate();
         }
 
         public IBinarySearchTree AvlLeftRightRotate()
@@ -79,9 +80,16 @@ namespace Trees.BinarySearchTree.Implementations
             return AvlLeftRightRotate(this);
         }
 
-        public IBinarySearchTree AvlRightLeftRotate(IBinarySearchTree binarySearchTree)
+        public IBinarySearchTree AvlRightLeftRotate(IBinarySearchTree tree)
         {
-            throw new NotImplementedException();
+            var parent = tree.Parent;
+            tree.AvlRightRotate();
+            return parent.AvlLeftRotate();
+        }
+
+        public IBinarySearchTree AvlRightLeftRotate()
+        {
+            return AvlRightLeftRotate(this);
         }
     }
 }

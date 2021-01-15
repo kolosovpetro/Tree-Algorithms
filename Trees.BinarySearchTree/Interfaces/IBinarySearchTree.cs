@@ -30,6 +30,7 @@
         IBinarySearchTree AvlRightRotate();
         IBinarySearchTree AvlLeftRightRotate(IBinarySearchTree tree);
         IBinarySearchTree AvlLeftRightRotate();
-        IBinarySearchTree AvlRightLeftRotate(IBinarySearchTree binarySearchTree);
+        IBinarySearchTree AvlRightLeftRotate(IBinarySearchTree tree);
+        IBinarySearchTree AvlRightLeftRotate();
     }
 }
